@@ -1,0 +1,44 @@
+{
+  "schema_version": "gold-fomc-window-v1",
+  "instrument": "518600",
+  "price_field": "adj_close",
+  "event_count": 24,
+  "method": {
+    "window": "FOMC声明日前后15个自然日",
+    "base": "FOMC声明前最后一个A股有效收盘",
+    "availability": "美国声明后的首个A股交易日",
+    "holiday": "目标日非交易日时使用距离目标日最近的有效A股交易日"
+  },
+  "groups": {
+    "2023_hikes": {
+      "events": 4,
+      "average_post15_return_pct": 0.0539,
+      "positive_events": 2,
+      "negative_events": 2
+    },
+    "2024_cuts": {
+      "events": 3,
+      "average_post15_return_pct": 1.7629,
+      "positive_events": 3,
+      "negative_events": 0
+    },
+    "2025_cuts": {
+      "events": 3,
+      "average_post15_return_pct": 5.2621,
+      "positive_events": 3,
+      "negative_events": 0
+    },
+    "all_cuts": {
+      "events": 6,
+      "average_post15_return_pct": 3.5125,
+      "positive_events": 6,
+      "negative_events": 0
+    },
+    "all_holds": {
+      "events": 14,
+      "average_post15_return_pct": 1.0106,
+      "positive_events": 7,
+      "negative_events": 7
+    }
+  }
+}

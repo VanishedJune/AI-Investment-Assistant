@@ -1,0 +1,39 @@
+{
+  "schema_version": "iteration-record-v1.0.0",
+  "etf": "515220",
+  "name": "煤炭ETF国泰",
+  "generated_at": "2026-09-07T21:26:27+09:00",
+  "rule_version": "existing-weekly-model-target",
+  "execution_policy": null,
+  "coverage": {
+    "start": "2020-03-02",
+    "end": "2026-09-04"
+  },
+  "usable_anchors": 295,
+  "latest_anchor_index": 294,
+  "resume_from": 295,
+  "pending_ai_reviews": 0,
+  "initial_champion": "CH_S064_1",
+  "final_champion": "CH_S064_1",
+  "promotion_chain": [
+    "CH_S064_1"
+  ],
+  "promotions": 0,
+  "proposals_frozen": 109,
+  "rounds_registered": 75,
+  "diagnostics": 109,
+  "challengers_total": 135,
+  "challenger_status": {
+    "REJECTED": 95,
+    "SHADOW_EVALUATION": 28,
+    "EVALUATING": 12
+  },
+  "events_total": 58945,
+  "events_by_type": {
+    "forecast": 11883,
+    "evaluation": 46915,
+    "proposal_orchestrated": 75,
+    "promotion_checkpoint": 72
+  },
+  "workspace": "D:\\Research\\Codex\\projects\\investment\\AI-Investment-Assistant\\model_iteration\\etf_515220"
+}

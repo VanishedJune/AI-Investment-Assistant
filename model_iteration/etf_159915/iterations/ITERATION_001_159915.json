@@ -1,0 +1,93 @@
+{
+  "schema_version": "iteration-record-v1.0.0",
+  "etf": "159915",
+  "name": "创业板ETF易方达",
+  "generated_at": "2026-08-29T15:47:45+09:00",
+  "rule_version": "B0207-v3.0.0",
+  "execution_policy": {
+    "mode": "b0207_cycle",
+    "decision_cycle_weeks": 4,
+    "signal_smooth_days": 5,
+    "non_decision_graded": {
+      "enabled": true,
+      "feature": "d_dif1",
+      "add_cash_frac": 0.5,
+      "sell_holdings_frac": 0.5
+    },
+    "bearish_guard": {
+      "enabled": true,
+      "sell_frac": 0.7,
+      "per_episode": true,
+      "reset_on_recovery": true,
+      "conditions": [
+        {
+          "feature": "d_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "d_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "mom20",
+          "op": "<",
+          "value": -0.05
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "start": "2011-12-09",
+    "end": "2026-08-28"
+  },
+  "usable_anchors": 715,
+  "latest_anchor_index": 714,
+  "resume_from": 715,
+  "pending_ai_reviews": 0,
+  "initial_champion": "CH_GRADED_5D",
+  "final_champion": "CH_P129_2",
+  "promotion_chain": [
+    "CH_GRADED_5D",
+    "CH_P003_5",
+    "CH_P012_3",
+    "CH_P033_3",
+    "CH_P067_1",
+    "CH_P086_3",
+    "CH_P107_2",
+    "CH_P116_4",
+    "CH_P129_2"
+  ],
+  "promotions": 8,
+  "proposals_frozen": 267,
+  "rounds_registered": 194,
+  "diagnostics": 267,
+  "challengers_total": 439,
+  "challenger_status": {
+    "STALE_SHADOW": 377,
+    "PROMOTED": 1,
+    "SHADOW_EVALUATION": 54,
+    "REJECTED": 1,
+    "EVALUATING": 6
+  },
+  "events_total": 133280,
+  "events_by_type": {
+    "forecast": 26762,
+    "evaluation": 106139,
+    "proposal_orchestrated": 194,
+    "promotion_checkpoint": 177,
+    "ai_review": 8
+  },
+  "workspace": "D:\\Research\\Codex\\projects\\investment\\AI-Investment-Assistant\\model_iteration\\etf_159915"
+}

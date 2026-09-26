@@ -1,0 +1,56 @@
+{
+  "iteration_id": "ITERATION_003",
+  "etf": "159915",
+  "workspace": "etf_159915",
+  "system": "weekly_rolling",
+  "policy_version": "promotion-v2.1（同现金流门禁+显著优势+IRR/MDD硬条件+固定定投+26周OOS+限频+rebase代际+全历史MDD）",
+  "status": "COMPLETED_FULL_HISTORY",
+  "window": {"anchors": 712, "start": "2012-09-14", "end": "2026-08-07", "last_anchor_pending": true, "matured_w1": 711},
+  "changes_vs_v2.1": {
+    "role_pool": "预测+5（mean_reversion_rsi/breakout_mom/dual_momentum/volume_divergence/channel_mean_revert），策略+3（mean_reversion/breakout/dual_momentum），learning_ridge 常驻语法",
+    "verify_driver": "支持 --resume/--stop-after 分段复现",
+    "external_changes_checked": "set_ledger_root/ledger_hash_dir、多ETF配置、proposal_orchestrated 计数变化（235/265）；60 项测试通过"
+  },
+  "competition": {
+    "frozen_proposals": 265,
+    "registered_challengers": 617,
+    "promotions": 4,
+    "final_champion": "CH_P132_3",
+    "final_effective_anchor": 593,
+    "status_counts": {"STALE_SHADOW": 554, "PROMOTED": 1, "SHADOW_EVALUATION": 37, "EVALUATING": 5, "REJECTED": 20},
+    "events": {
+      "forecast": 45098,
+      "evaluation": 179733,
+      "proposal_orchestrated": 235,
+      "promotion_checkpoint": 176,
+      "ai_review": 4
+    }
+  },
+  "champion_chain": [
+    {"anchor": 236, "from": "champion_zero_axis", "to": "CH_S025_3", "decision": "APPROVE"},
+    {"anchor": 268, "from": "CH_S025_3", "to": "CH_S030_3", "decision": "APPROVE"},
+    {"anchor": 316, "from": "CH_S030_3", "to": "CH_S035_3", "decision": "APPROVE"},
+    {"anchor": 592, "from": "CH_S035_3", "to": "CH_P132_3", "decision": "APPROVE"}
+  ],
+  "archives": {
+    "champion_snapshot": "etf_159915/champions/CH_S064_1.json",
+    "legacy_iteration": "etf_159915/iterations/legacy_v2.1/"
+  },
+  "reproducibility": {
+    "segment_hashes": {
+      "0_300": "f01905548d200d034c48cf02c58bfaaac7ad0c2dac4d1e61889c705c208e7cec",
+      "300_600": "55f22a808d774d6055dce2ae53bac409d5d492edd2d1a4f9ecd749d3bb780cf4",
+      "600_711": "421bd5a306bec7d6776755ba34056ef5364ab09fd4ad868fe9c374759cf184b3"
+    },
+    "generate_final_hash": "421bd5a306bec7d6776755ba34056ef5364ab09fd4ad868fe9c374759cf184b3",
+    "verify_final_hash": "421bd5a306bec7d6776755ba34056ef5364ab09fd4ad868fe9c374759cf184b3",
+    "identical": true
+  },
+  "tests": 60,
+  "conclusion": "ACCEPT",
+  "next_steps": [
+    "注册 learning_ridge 候选（语法已常驻）进入下一轮同场竞技",
+    "输出最终 Champion（CH_P132_3）与定投的复合对比报告",
+    "两阶段晋级/显著性检验可按需接入"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "instrument-replacement-v1",
+  "status": "completed_user_confirmed_details_pending",
+  "old_code": "518600",
+  "new_code": "517520",
+  "priority_position": 2,
+  "b0207_group": "core",
+  "data_as_of": "2026-09-04",
+  "data_run_id": "20260907T131027",
+  "event_id": "APH-20260907-001",
+  "model_transfer": {
+    "source_code": "518600",
+    "source_workspace": "etf_518600",
+    "source_champion_id": "CH_S064_1",
+    "source_trained_anchor_index": 271,
+    "transfer_confirmed_on": "2026-09-07",
+    "mode": "initial_parameters_then_independent_full_cycle",
+    "target_training_history": "completed_2026-09-07",
+    "performance_status": "FULL_CYCLE_COMPLETED_NO_PROMOTION",
+    "target_usable_anchors": 108,
+    "target_trained_anchor_index": 107,
+    "target_final_champion_id": "CH_S064_1",
+    "target_champion_source": "model_iteration/etf_517520/weekly_rolling/state.json",
+    "target_iteration_record": "model_iteration/etf_517520/iterations/ITERATION_001_517520.json"
+  },
+  "old_priority": [
+    "159915",
+    "518600",
+    "516150",
+    "159622",
+    "159941",
+    "515220",
+    "512800",
+    "512690"
+  ],
+  "new_priority": [
+    "159915",
+    "517520",
+    "516150",
+    "159622",
+    "159941",
+    "515220",
+    "512800",
+    "512690"
+  ],
+  "history_archive": "archive/instrument_replacements/518600_to_517520",
+  "analysis_status": "independent_full_cycle_completed",
+  "limitations": [
+    "新标的是黄金产业股票，不是实物黄金",
+    "指数代码及部分基金元数据待核实",
+    "517520覆盖期公司行动已由分红送配页与上交所公告列表交叉核对，未发现事件",
+    "2026-09-07独立全周期回放完成；108个锚点内无候选完成晋级，冠军仍为CH_S064_1"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "iteration-record-v1.0.0",
+  "etf": "517520",
+  "name": "黄金股ETF永赢",
+  "generated_at": "2026-09-07T21:17:40+09:00",
+  "rule_version": "existing-weekly-model-target",
+  "execution_policy": null,
+  "coverage": {
+    "start": "2023-11-01",
+    "end": "2026-09-04"
+  },
+  "usable_anchors": 108,
+  "latest_anchor_index": 107,
+  "resume_from": 108,
+  "pending_ai_reviews": 0,
+  "initial_champion": "CH_S064_1",
+  "final_champion": "CH_S064_1",
+  "promotion_chain": [
+    "CH_S064_1"
+  ],
+  "promotions": 0,
+  "proposals_frozen": 39,
+  "rounds_registered": 34,
+  "diagnostics": 39,
+  "challengers_total": 70,
+  "challenger_status": {
+    "REJECTED": 11,
+    "SHADOW_EVALUATION": 41,
+    "EVALUATING": 18
+  },
+  "events_total": 17996,
+  "events_by_type": {
+    "forecast": 3765,
+    "evaluation": 14172,
+    "proposal_orchestrated": 34,
+    "promotion_checkpoint": 25
+  },
+  "workspace": "D:\\Research\\Codex\\projects\\investment\\AI-Investment-Assistant\\model_iteration\\etf_517520"
+}

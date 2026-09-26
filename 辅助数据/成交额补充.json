@@ -1,0 +1,163 @@
+{
+  "schema_version": "turnover-supplement-v1",
+  "checked_at": "2026-09-12T07:32:40.314620+00:00",
+  "data_as_of": "2026-09-11",
+  "base_data_run_id": "20260912T100937",
+  "records": [
+    {
+      "code": "159915",
+      "trade_date": "2026-09-11",
+      "amount_cny": 6320257883.0,
+      "raw_ohlcv": {
+        "raw_open": 3.323,
+        "raw_high": 3.354,
+        "raw_low": 3.28,
+        "raw_close": 3.341,
+        "volume": 1905297200.0
+      },
+      "source_timestamp": "20260911161454 Asia/Shanghai",
+      "source_trade_summary": "3.341/19052972/6320257883",
+      "status": "verified_closed_quote",
+      "unit": "CNY",
+      "method": "provider_reported_amount_not_price_times_volume",
+      "source_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159915%2Cday%2C2026-09-11%2C2026-09-11%2C640%2Cqfq",
+      "verified_at": "2026-09-12T07:32:38.752456+00:00"
+    },
+    {
+      "code": "517520",
+      "trade_date": "2026-09-11",
+      "amount_cny": 1010358714.0,
+      "raw_ohlcv": {
+        "raw_open": 2.11,
+        "raw_high": 2.136,
+        "raw_low": 2.052,
+        "raw_close": 2.116,
+        "volume": 483323100.0
+      },
+      "source_timestamp": "20260911161500 Asia/Shanghai",
+      "source_trade_summary": "2.116/4833231/1010358714",
+      "status": "verified_closed_quote",
+      "unit": "CNY",
+      "method": "provider_reported_amount_not_price_times_volume",
+      "source_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh517520%2Cday%2C2026-09-11%2C2026-09-11%2C640%2Cqfq",
+      "verified_at": "2026-09-12T07:32:38.968952+00:00"
+    },
+    {
+      "code": "516150",
+      "trade_date": "2026-09-11",
+      "amount_cny": 104084812.0,
+      "raw_ohlcv": {
+        "raw_open": 1.652,
+        "raw_high": 1.652,
+        "raw_low": 1.609,
+        "raw_close": 1.638,
+        "volume": 63885400.0
+      },
+      "source_timestamp": "20260911161500 Asia/Shanghai",
+      "source_trade_summary": "1.638/638854/104084812",
+      "status": "verified_closed_quote",
+      "unit": "CNY",
+      "method": "provider_reported_amount_not_price_times_volume",
+      "source_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh516150%2Cday%2C2026-09-11%2C2026-09-11%2C640%2Cqfq",
+      "verified_at": "2026-09-12T07:32:39.196728+00:00"
+    },
+    {
+      "code": "159622",
+      "trade_date": "2026-09-11",
+      "amount_cny": 75372989.0,
+      "raw_ohlcv": {
+        "raw_open": 1.13,
+        "raw_high": 1.13,
+        "raw_low": 1.107,
+        "raw_close": 1.116,
+        "volume": 67629100.0
+      },
+      "source_timestamp": "20260911161451 Asia/Shanghai",
+      "source_trade_summary": "1.116/676291/75372989",
+      "status": "verified_closed_quote",
+      "unit": "CNY",
+      "method": "provider_reported_amount_not_price_times_volume",
+      "source_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159622%2Cday%2C2026-09-11%2C2026-09-11%2C640%2Cqfq",
+      "verified_at": "2026-09-12T07:32:39.426644+00:00"
+    },
+    {
+      "code": "159941",
+      "trade_date": "2026-09-11",
+      "amount_cny": 965865826.0,
+      "raw_ohlcv": {
+        "raw_open": 1.632,
+        "raw_high": 1.638,
+        "raw_low": 1.625,
+        "raw_close": 1.638,
+        "volume": 591860700.0
+      },
+      "source_timestamp": "20260911161418 Asia/Shanghai",
+      "source_trade_summary": "1.638/5918607/965865826",
+      "status": "verified_closed_quote",
+      "unit": "CNY",
+      "method": "provider_reported_amount_not_price_times_volume",
+      "source_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz159941%2Cday%2C2026-09-11%2C2026-09-11%2C640%2Cqfq",
+      "verified_at": "2026-09-12T07:32:39.658581+00:00"
+    },
+    {
+      "code": "515220",
+      "trade_date": "2026-09-11",
+      "amount_cny": 805505794.0,
+      "raw_ohlcv": {
+        "raw_open": 1.32,
+        "raw_high": 1.328,
+        "raw_low": 1.288,
+        "raw_close": 1.292,
+        "volume": 619323500.0
+      },
+      "source_timestamp": "20260911161500 Asia/Shanghai",
+      "source_trade_summary": "1.292/6193235/805505794",
+      "status": "verified_closed_quote",
+      "unit": "CNY",
+      "method": "provider_reported_amount_not_price_times_volume",
+      "source_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh515220%2Cday%2C2026-09-11%2C2026-09-11%2C640%2Cqfq",
+      "verified_at": "2026-09-12T07:32:39.868734+00:00"
+    },
+    {
+      "code": "512800",
+      "trade_date": "2026-09-11",
+      "amount_cny": 905949827.0,
+      "raw_ohlcv": {
+        "raw_open": 0.854,
+        "raw_high": 0.856,
+        "raw_low": 0.845,
+        "raw_close": 0.847,
+        "volume": 1065658200.0
+      },
+      "source_timestamp": "20260911161500 Asia/Shanghai",
+      "source_trade_summary": "0.847/10656582/905949827",
+      "status": "verified_closed_quote",
+      "unit": "CNY",
+      "method": "provider_reported_amount_not_price_times_volume",
+      "source_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh512800%2Cday%2C2026-09-11%2C2026-09-11%2C640%2Cqfq",
+      "verified_at": "2026-09-12T07:32:40.088470+00:00"
+    },
+    {
+      "code": "512690",
+      "trade_date": "2026-09-11",
+      "amount_cny": 424725424.0,
+      "raw_ohlcv": {
+        "raw_open": 0.418,
+        "raw_high": 0.418,
+        "raw_low": 0.409,
+        "raw_close": 0.412,
+        "volume": 1031060700.0
+      },
+      "source_timestamp": "20260911161445 Asia/Shanghai",
+      "source_trade_summary": "0.412/10310607/424725424",
+      "status": "verified_closed_quote",
+      "unit": "CNY",
+      "method": "provider_reported_amount_not_price_times_volume",
+      "source_url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh512690%2Cday%2C2026-09-11%2C2026-09-11%2C640%2Cqfq",
+      "verified_at": "2026-09-12T07:32:40.314620+00:00"
+    }
+  ],
+  "warnings": [],
+  "scope": "独立收盘成交额补充；下一次显式行情更新只补已有空值；不回写冻结月报和模型输入",
+  "history_status": "earlier_missing_amounts_remain_unavailable"
+}

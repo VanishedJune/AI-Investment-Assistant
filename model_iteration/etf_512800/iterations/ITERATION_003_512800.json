@@ -1,0 +1,56 @@
+{
+  "ITERATION_ID": "ITERATION_003_512800",
+  "etf": "512800",
+  "name": "华宝银行ETF",
+  "generated_at": "2026-08-08T23:05:00+09:00",
+  "engine": "rolling promotion-v2.0.0",
+  "coverage": {"start": "2018-05-11", "end": "2026-08-07"},
+  "anchors_usable": 422,
+  "horizon_weeks": 8,
+  "cost_bps": 10,
+  "initial_champion": {
+    "id": "512800_CH_S050_3",
+    "rule": "零轴双正（d_dif1>0 且 d_dif2>0 → 100%，2 周确认斜坡）",
+    "effective_anchor": 0
+  },
+  "final_champion": {
+    "id": "512800_CH_P030_3",
+    "engine_id": "CH_P030_3",
+    "effective_anchor": 197
+  },
+  "promotion_history": [
+    {
+      "new_champion_id": "512800_CH_P030_3",
+      "engine_id": "CH_P030_3",
+      "anchor": 196,
+      "effective_anchor": 197,
+      "ai_decision": "APPROVE"
+    }
+  ],
+  "challenger_counts": {
+    "total": 432,
+    "STALE_SHADOW": 246,
+    "REJECTED": 109,
+    "SHADOW_EVALUATION": 56,
+    "EVALUATING": 20,
+    "PROMOTED": 1
+  },
+  "event_counts": {
+    "total": 165958,
+    "forecast": 33370,
+    "evaluation": 132323,
+    "proposal_orchestrated": 148,
+    "promotion_checkpoint": 104,
+    "ai_review": 1,
+    "challenger_rebased": 12
+  },
+  "proposals_frozen": 157,
+  "proposals_registered": 148,
+  "ledger_hash": "80ed4511d1508b96b0f6de1b699b5bf7322c05a23a6ac5b144376a977edb9efd",
+  "pending_ai_reviews": 0,
+  "notes": [
+    "全周期重新开始：初始 Champion = 旧零轴双正 CH_S050_3（带 ETF 前缀 512800_CH_S050_3）。",
+    "上一轮 CH_S064_1 基线完整工作区已归档至 backup/etf_512800_CHS064_1_to_CHS023_2_20260808_221526。",
+    "最终 Champion 输出名称带 ETF 编号：512800_CH_P030_3（引擎内 id 为 CH_P030_3）。"
+  ]
+}

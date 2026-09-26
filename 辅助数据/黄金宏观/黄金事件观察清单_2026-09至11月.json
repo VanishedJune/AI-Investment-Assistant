@@ -1,0 +1,111 @@
+{
+  "schema_version": "gold-event-watchlist-v1",
+  "instrument_scope": [
+    "518600"
+  ],
+  "created_date": "2026-09-03",
+  "source_context": {
+    "type": "user_provided_screenshot_summary",
+    "status": "secondary_commentary_not_primary_evidence",
+    "limitation": "截图中的日期、价格路线和政策判断不是原始官方数据；除本地已核实的FOMC日历外，所有日期在实际分析前必须重新核对官方发布日历。"
+  },
+  "usage_rule": "本清单只用于黄金ETF的事件风险提醒。事件发生前不得把情景推演写成确定方向；事件发生后必须读取实际值、市场预期、美国收益率、美元及黄金价格反应，再与518600周K、日K、均线和成交量联合判断。",
+  "events": [
+    {
+      "event_id": "GOLD-WATCH-20260904-NFP",
+      "date": "2026-09-04",
+      "event": "美国8月就业报告／非农",
+      "verification_status": "date_from_screenshot_requires_official_recheck",
+      "screenshot_scenario": "若就业明显弱于预期，降息或偏鸽预期可能升温并支持黄金；若就业强于预期，实际利率和美元可能上升并压制黄金。",
+      "required_observations": [
+        "官方实际值与发布前市场预期之差",
+        "失业率、非农就业人数和平均时薪的联合变化",
+        "美国10年TIPS实际收益率与10年名义收益率",
+        "美元指数与USD/CNY",
+        "国际黄金发布后反应及下一A股交易日518600量价"
+      ],
+      "decision_boundary": "仅有弱非农或强非农标签不得触发黄金调仓；缺少官方实际值或关键市场反应时标记pending。"
+    },
+    {
+      "event_id": "GOLD-WATCH-20260911-CPI",
+      "date": "2026-09-11",
+      "event": "美国8月CPI",
+      "verification_status": "date_from_screenshot_requires_official_recheck",
+      "screenshot_scenario": "CPI高于预期可能推升鹰派或加息预期并压制黄金；CPI低于预期可能压低实际利率并支持黄金。",
+      "required_observations": [
+        "总体CPI与核心CPI的同比和环比实际值",
+        "实际值相对市场预期的偏差",
+        "美国10年TIPS实际收益率、名义收益率和通胀补偿",
+        "美元指数与USD/CNY",
+        "国际黄金发布后反应及下一A股交易日518600量价"
+      ],
+      "decision_boundary": "必须以预期差和实际利率反应为主，不能使用CPI绝对高低直接推导黄金方向。"
+    },
+    {
+      "event_id": "GOLD-WATCH-20260916-FOMC",
+      "date_window": "2026-09-15/2026-09-16",
+      "primary_decision_date": "2026-09-16",
+      "event": "美联储FOMC会议及政策声明",
+      "verification_status": "official_calendar_verified_in_local_evidence_as_of_2026-08-28",
+      "screenshot_scenario": "图片将加息视为短期利空、维持利率视为利多；该二分法只保留为待检验情景。",
+      "required_observations": [
+        "目标利率实际决定",
+        "声明措辞、点阵图、经济预测和主席记者会",
+        "决定相对会前市场定价的偏差",
+        "美国10年TIPS实际收益率、名义收益率和美元反应",
+        "国际黄金发布后反应及下一A股交易日518600量价",
+        "与本地同类FOMC历史15日窗口比较并披露小样本限制"
+      ],
+      "decision_boundary": "鹰派维持也可能压制黄金，已充分定价的加息也可能利空出尽；政策动作本身不得单独触发交易。"
+    },
+    {
+      "event_id": "GOLD-WATCH-20261102-06-PRE-ELECTION",
+      "date_window": "2026-11-02/2026-11-06",
+      "event": "美国中期选举前后第一反应窗口",
+      "verification_status": "derived_monitoring_window_recheck_official_election_calendar",
+      "screenshot_scenario": "图片警告选举前后可能出现流动性扰动，但没有提供可验证的必跌证据。",
+      "required_observations": [
+        "美国中期选举官方日历和结果进度",
+        "TGA余额、美国财政部净融资和国债期限结构",
+        "美联储准备金及逆回购变化",
+        "美国实际收益率、美元、国际黄金与主要风险资产反应",
+        "518600下一可交易日量价和周K结构"
+      ],
+      "decision_boundary": "选举日期不是机械涨跌信号；没有流动性数据确认时不得写市场将全面下跌。"
+    },
+    {
+      "event_id": "GOLD-WATCH-20261109-13-POST-ELECTION",
+      "date_window": "2026-11-09/2026-11-13",
+      "event": "中期选举后首个完整交易周",
+      "verification_status": "derived_monitoring_window",
+      "screenshot_scenario": "检查图片所称的选举后流动性压力是否真正出现。",
+      "required_observations": [
+        "选举结果是否明确及财政政策预期变化",
+        "TGA、国债净发行、准备金和逆回购的实际变化",
+        "黄金与美股、实际收益率和美元是否形成一致或背离",
+        "518600周K、日K、均线与成交量确认"
+      ],
+      "decision_boundary": "只有流动性、利率、美元和黄金价格出现多项一致证据时，才能提高该事件对持仓判断的权重。"
+    },
+    {
+      "event_id": "GOLD-WATCH-20261130-MONTH-END",
+      "date": "2026-11-30",
+      "event": "11月月末复核",
+      "verification_status": "internal_review_checkpoint_not_external_event",
+      "screenshot_scenario": "复核中期选举后风险叙事是否得到整月真实数据支持。",
+      "required_observations": [
+        "11月黄金、实际收益率、美元和USD/CNY累计变化",
+        "TGA、国债发行和市场流动性整月变化",
+        "518600周K主趋势、日K动量、均线、成交量和回撤",
+        "此前事件情景命中与失效原因"
+      ],
+      "decision_boundary": "这是复盘节点，不是预设交易日；不得因截图中的长期看多或全面下跌说法自动调仓。"
+    }
+  ],
+  "excluded_claims": [
+    "未说明具体合约的COMEX 4400至4365、4200至4300等点位不映射为518600买卖价。",
+    "手绘红蓝价格路径不作为预测数据。",
+    "2026年最多两次加息、2027年继续降息等说法在未取得来源前不进入正式判断。",
+    "中期选举后市场全面下跌不作为既定事实。"
+  ]
+}

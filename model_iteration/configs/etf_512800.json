@@ -1,0 +1,49 @@
+{
+  "etf": "512800",
+  "name": "华宝银行ETF",
+  "workspace": "etf_512800",
+  "coverage": {
+    "start": "2017-08-03",
+    "end": "2026-08-28"
+  },
+  "expected_anchors": 425,
+  "horizon": 8,
+  "cost_bps": 10,
+  "champion": {
+    "id": "CH_P030_3",
+    "spec": {
+      "score": {
+        "terms": [
+          {
+            "feature": "dd20",
+            "weight": -17.5
+          },
+          {
+            "feature": "d_dif1",
+            "weight": 875.0
+          },
+          {
+            "feature": "mom5",
+            "weight": -50.0
+          }
+        ]
+      },
+      "position": {
+        "type": "step",
+        "levels": [
+          {
+            "score_min": 0.0,
+            "weight": 0.5
+          }
+        ],
+        "min": 0.0,
+        "max": 0.5
+      }
+    }
+  },
+  "promotion_policy_version": "promotion-v2.0.0",
+  "execution_policy": {
+    "mode": "b0207_cycle",
+    "decision_cycle_weeks": 4
+  }
+}

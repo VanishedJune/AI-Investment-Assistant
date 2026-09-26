@@ -1,0 +1,40 @@
+{
+  "schema_version": "ca-events-v1.0.0",
+  "etf": "512690",
+  "coverage": {
+    "start": "2019-05-06",
+    "end": "2026-08-28",
+    "verified": true,
+    "source": [
+      "https://epaper.cs.com.cn/zgzqb/html/2021-05/17/nw.D110000zgzqb_20210517_8-B011.htm（2021-05-17 拆分结果公告：拆分比例 1:2）",
+      "http://vip.stock.finance.sina.com.cn/fund/go.php/vAkFundInfo_JJGKXX/q/2340935.phtml（拆分结果：拆分比例 1:2，拆分后净值 1.3480，累计净值 2.6960）",
+      "https://www.hongtastock.com/collectArticle/cmsweb-ywgg/index_528.htm（权益登记日 2021-05-13，拆分日 2021-05-14 暂停交易，2021-05-17 恢复）",
+      "https://fund.stockstar.com/SN2021122900001567.shtml（2021 年第 1 次分红公告：收益分配基准日 2021-12-22，权益登记日 2021-12-30，除息日 2021-12-31）",
+      "https://quoteimg.cfi.cn/jjsyfp/89708/512690.html（10派3.5元，权益登记日 2021-12-30，除息日 2021-12-31，发放日 2022-01-06）",
+      "https://fundf10.eastmoney.com/jbgk_512690.html（成立来分红 每份累计0.35元，1次）"
+    ],
+    "note": "窗口 2019-05-06~2026-08-28 内共两个显式事件：(1) 2021-05-14 基金份额拆分 1:2（权益登记日 2021-05-13，拆分日暂停交易，2021-05-17 起按新份额交易）；(2) 2021-12-31 现金分红 每份 0.35 元（权益登记日 2021-12-30，发放日 2022-01-06）。基金 2019-04-04 成立，数据窗口内无上市前/窗口内其他折算事件（2026-08-08~2026-08-28 内无新增公司行动）。"
+  },
+  "events": [
+    {
+      "type": "split",
+      "ex_date": "2021-05-14",
+      "entitlement_date": "2021-05-13",
+      "pay_date": "2021-05-14",
+      "ratio": 2.0,
+      "dps": 0,
+      "source": "https://epaper.cs.com.cn/zgzqb/html/2021-05/17/nw.D110000zgzqb_20210517_8-B011.htm",
+      "verified": true
+    },
+    {
+      "type": "cash_dividend",
+      "ex_date": "2021-12-31",
+      "entitlement_date": "2021-12-30",
+      "pay_date": "2022-01-06",
+      "ratio": 1.0,
+      "dps": 0.35,
+      "source": "https://fund.stockstar.com/SN2021122900001567.shtml",
+      "verified": true
+    }
+  ]
+}

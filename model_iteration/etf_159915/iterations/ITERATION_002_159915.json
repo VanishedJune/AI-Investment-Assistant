@@ -1,0 +1,52 @@
+{
+  "iteration_id": "ITERATION_002",
+  "etf": "159915",
+  "workspace": "etf_159915",
+  "system": "weekly_rolling",
+  "policy_version": "promotion-v2.1.0（同现金流门禁+显著优势+IRR/MDD硬条件+固定定投+26周OOS+限频+rebase代际+全历史MDD）",
+  "status": "COMPLETED_FULL_HISTORY",
+  "window": {"anchors": 712, "start": "2012-09-14", "end": "2026-08-07", "last_anchor_pending": true, "matured_w1": 711},
+  "rules_v2_1": {
+    "cashflow_gate": "每周2000从创建锚点累积到截止Due；TWR ≥ max(Champion,智能定投,固定定投)+max(5%相对,2pp)；IRR ≥ 基准最高；MDD ≥ 基准最差−5pp",
+    "min_oos_weeks": 26,
+    "max_promotions_per_52w": 2,
+    "long_horizon_mdd_hard": -0.45,
+    "max_rebase_generations": 2,
+    "prediction_track": "spec score→概率映射（修复预测类死锁）",
+    "drawdown_control": "position_path 回填 equity_history，回撤制动真实生效",
+    "auto_review": false
+  },
+  "competition": {
+    "frozen_proposals": 265,
+    "registered_challengers": 623,
+    "promotions": 3,
+    "final_champion": "CH_S064_1",
+    "final_effective_anchor": 565,
+    "status_counts": {"STALE_SHADOW": 531, "PROMOTED": 1, "SHADOW_EVALUATION": 34, "EVALUATING": 19, "REJECTED": 38},
+    "events": {
+      "forecast": 45652,
+      "evaluation": 181785,
+      "proposal_orchestrated": 265,
+      "promotion_checkpoint": 176,
+      "ai_review": 3
+    }
+  },
+  "champion_chain": [
+    {"anchor": 172, "from": "champion_zero_axis", "to": "CH_P033_2", "decision": "APPROVE"},
+    {"anchor": 348, "from": "CH_P033_2", "to": "CH_P062_5", "decision": "APPROVE"},
+    {"anchor": 564, "from": "CH_P062_5", "to": "CH_S064_1", "decision": "APPROVE"}
+  ],
+  "reproducibility": {
+    "generate_run_hash": "a5a5c2ffc9cb548e4ff4a8de485e91e18e5cd42a8a732e699596ad5456cbd38d",
+    "verify_run2_hash": "5e34106e020baa5f480a96a32d688740219620cbe2b00f4df7b5e647d6df6a80",
+    "verify_run3_hash": "5e34106e020baa5f480a96a32d688740219620cbe2b00f4df7b5e647d6df6a80",
+    "note": "run2==run3 为驱动复核确定性对（run1 为手动 CLI 复核，理由字符串编码差异导致哈希不同，不作为复现对）"
+  },
+  "tests": 58,
+  "conclusion": "ACCEPT",
+  "next_steps": [
+    "接入学轨（learning_ridge）Proposal 参与下一轮同场竞技",
+    "输出最终 Champion（CH_S064_1）与智能定投/固定定投的复合对比报告",
+    "如需满额登记，扩充角色池或细化同质判定"
+  ]
+}

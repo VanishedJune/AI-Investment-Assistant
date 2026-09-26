@@ -1,0 +1,14 @@
+{
+  "schema_version": "ca-events-v1.0.0",
+  "etf": "159611",
+  "coverage": {
+    "start": "2022-01-07",
+    "end": "2026-09-18",
+    "verified": true,
+    "source": "广发基金159611产品公开资料及公开分红记录；腾讯原始日K与前复权日K逐日一致",
+    "checked_on": "2026-09-19",
+    "adjustment_basis": "raw_and_qfq_prices_equal; adj_factor_constant_1.0",
+    "distribution_count": 0
+  },
+  "events": []
+}

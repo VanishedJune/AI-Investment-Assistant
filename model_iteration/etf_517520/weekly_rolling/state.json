@@ -1,0 +1,8043 @@
+{
+  "schema_version": "rolling-v1.0.0",
+  "etf": "517520",
+  "latest_anchor_index": 107,
+  "paused_at": null,
+  "resume_from": 108,
+  "matured_counts": {
+    "w1": 107,
+    "w2": 106,
+    "w4": 104,
+    "w8": 100
+  },
+  "last_triggered": {
+    "prediction": 104,
+    "strategy": 104
+  },
+  "champion": {
+    "id": "CH_S064_1",
+    "spec": {
+      "score": {
+        "terms": [
+          {
+            "feature": "mom20",
+            "weight": 1250.0
+          }
+        ]
+      },
+      "gates": [
+        {
+          "feature": "mom20",
+          "op": ">",
+          "value": 0.0
+        }
+      ],
+      "position": {
+        "type": "step",
+        "levels": [
+          {
+            "score_min": 0.0,
+            "weight": 0.8
+          }
+        ],
+        "min": 0.0,
+        "max": 0.8
+      },
+      "drawdown_control": {
+        "window_weeks": 8,
+        "threshold": 0.1,
+        "factor": 0.5
+      }
+    },
+    "spec_hash": "a89ae70c5d0f4973",
+    "effective_anchor": 0
+  },
+  "active_challengers": [
+    {
+      "id": "CH_P001_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 175.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.06
+          }
+        ]
+      },
+      "spec_hash": "622f131f7a6b5269",
+      "status": "REJECTED",
+      "challenge_type": "prediction",
+      "created_anchor": 4,
+      "forward_oos_start": 5,
+      "account_snapshot": {
+        "cash": 94963.52542372882,
+        "shares": 0.0,
+        "nav": 94963.525424
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@4",
+      "baseline_start_anchor": 5,
+      "baseline_account_snapshot_hash": "472ac08c11a3ac3b",
+      "matured_counts": {
+        "w1": 27,
+        "w8": 20
+      },
+      "low_effect": true,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.0,
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "avg_pos": 0.0
+      },
+      "evaluation_shadow_nav": 100000.0,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.0
+      },
+      "reject_reason": "LOW_EFFECT"
+    },
+    {
+      "id": "CH_P001_2",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 1750.0
+            },
+            {
+              "feature": "d_dif2",
+              "weight": 875.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 875.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 525.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "w_ma_align",
+            "op": ">=",
+            "value": 0.5
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 5.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        }
+      },
+      "spec_hash": "e51ecc6a362aad04",
+      "status": "REJECTED",
+      "challenge_type": "prediction",
+      "created_anchor": 4,
+      "forward_oos_start": 5,
+      "account_snapshot": {
+        "cash": 94963.52542372882,
+        "shares": 0.0,
+        "nav": 94963.525424
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@4",
+      "baseline_start_anchor": 5,
+      "baseline_account_snapshot_hash": "472ac08c11a3ac3b",
+      "matured_counts": {
+        "w1": 27,
+        "w8": 20
+      },
+      "low_effect": true,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.0,
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "avg_pos": 0.0
+      },
+      "evaluation_shadow_nav": 100000.0,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.0
+      },
+      "reject_reason": "LOW_EFFECT"
+    },
+    {
+      "id": "CH_P001_3",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_slope",
+              "weight": 12.5
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        },
+        "gates": [
+          {
+            "feature": "d_slope",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "f5a7f84fd06e6e16",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 4,
+      "forward_oos_start": 5,
+      "account_snapshot": {
+        "cash": 94963.52542372882,
+        "shares": 0.0,
+        "nav": 94963.525424
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@4",
+      "baseline_start_anchor": 5,
+      "baseline_account_snapshot_hash": "472ac08c11a3ac3b",
+      "matured_counts": {
+        "w1": 99,
+        "w8": 92
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.044248,
+        "sharpe": -2.1891,
+        "mdd": -0.061956,
+        "win_rate": 0.25,
+        "avg_pos": 0.4
+      },
+      "evaluation_shadow_nav": 95575.239932,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.044248
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.1411,
+        "champion_twr": 0.4594,
+        "dca_twr": 1.0574,
+        "challenger_irr": 0.0009,
+        "champion_irr": 0.3479,
+        "dca_irr": 0.5744,
+        "challenger_mdd": -0.191,
+        "champion_mdd": -0.1888,
+        "dca_mdd": -0.2522
+      }
+    },
+    {
+      "id": "CH_P001_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 100.0
+            },
+            {
+              "feature": "rsi14",
+              "weight": -1.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.6
+            }
+          ],
+          "min": 0.0,
+          "max": 0.6
+        }
+      },
+      "spec_hash": "052a77979686285e",
+      "status": "REJECTED",
+      "challenge_type": "prediction",
+      "created_anchor": 4,
+      "forward_oos_start": 5,
+      "account_snapshot": {
+        "cash": 94963.52542372882,
+        "shares": 0.0,
+        "nav": 94963.525424
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@4",
+      "baseline_start_anchor": 5,
+      "baseline_account_snapshot_hash": "472ac08c11a3ac3b",
+      "matured_counts": {
+        "w1": 27,
+        "w8": 20
+      },
+      "low_effect": true,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.0,
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "avg_pos": 0.0
+      },
+      "evaluation_shadow_nav": 100000.0,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.0
+      },
+      "reject_reason": "LOW_EFFECT"
+    },
+    {
+      "id": "CH_P001_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_slope",
+              "weight": 20.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 2000.0
+            },
+            {
+              "feature": "mom20",
+              "weight": 40.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "71eec01dfae21990",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 4,
+      "forward_oos_start": 5,
+      "account_snapshot": {
+        "cash": 94963.52542372882,
+        "shares": 0.0,
+        "nav": 94963.525424
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@4",
+      "baseline_start_anchor": 5,
+      "baseline_account_snapshot_hash": "472ac08c11a3ac3b",
+      "matured_counts": {
+        "w1": 99,
+        "w8": 92
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.062956,
+        "sharpe": -3.6831,
+        "mdd": -0.062956,
+        "win_rate": 0.0,
+        "avg_pos": 0.2
+      },
+      "evaluation_shadow_nav": 93704.40678,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.062956
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.2064,
+        "champion_twr": 0.386,
+        "dca_twr": 0.9171,
+        "challenger_irr": -0.0534,
+        "champion_irr": 0.1891,
+        "dca_irr": 0.3473,
+        "challenger_mdd": -0.3564,
+        "champion_mdd": -0.2291,
+        "dca_mdd": -0.4277
+      }
+    },
+    {
+      "id": "CH_P002_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_slope",
+              "weight": 17.5
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 1750.0
+            },
+            {
+              "feature": "mom20",
+              "weight": 35.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "e5a62c4137263117",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 8,
+      "forward_oos_start": 9,
+      "account_snapshot": {
+        "cash": 21430.61699714958,
+        "shares": 62125.02433704772,
+        "nav": 107163.150582
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@8",
+      "baseline_start_anchor": 9,
+      "baseline_account_snapshot_hash": "9b2fc66d90202c4e",
+      "matured_counts": {
+        "w1": 95,
+        "w8": 88
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.216463,
+        "sharpe": 2.8757,
+        "mdd": -0.063893,
+        "win_rate": 0.375,
+        "avg_pos": 0.5556
+      },
+      "evaluation_shadow_nav": 121646.287016,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.216463
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.052,
+        "champion_twr": 0.2932,
+        "dca_twr": 0.5249,
+        "challenger_irr": -0.1063,
+        "champion_irr": 0.1352,
+        "dca_irr": 0.2439,
+        "challenger_mdd": -0.3067,
+        "champion_mdd": -0.2174,
+        "dca_mdd": -0.3701
+      }
+    },
+    {
+      "id": "CH_P002_2",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 100.0
+            },
+            {
+              "feature": "vol_pct",
+              "weight": -20.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.75
+            }
+          ],
+          "min": 0.0,
+          "max": 0.75
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "4424be8bc794081b",
+      "status": "REJECTED",
+      "challenge_type": "prediction",
+      "created_anchor": 8,
+      "forward_oos_start": 9,
+      "account_snapshot": {
+        "cash": 21430.61699714958,
+        "shares": 62125.02433704772,
+        "nav": 107163.150582
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@8",
+      "baseline_start_anchor": 9,
+      "baseline_account_snapshot_hash": "9b2fc66d90202c4e",
+      "matured_counts": {
+        "w1": 27,
+        "w8": 20
+      },
+      "low_effect": true,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.0,
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "avg_pos": 0.0
+      },
+      "evaluation_shadow_nav": 100000.0,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.0
+      },
+      "reject_reason": "LOW_EFFECT"
+    },
+    {
+      "id": "CH_P002_3",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif2",
+              "weight": 1500.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 750.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.9
+            }
+          ],
+          "min": 0.0,
+          "max": 0.9
+        },
+        "gates": [
+          {
+            "feature": "d_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "d_dif2",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "c0d99b79a8ee261f",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 8,
+      "forward_oos_start": 9,
+      "account_snapshot": {
+        "cash": 21430.61699714958,
+        "shares": 62125.02433704772,
+        "nav": 107163.150582
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@8",
+      "baseline_start_anchor": 9,
+      "baseline_account_snapshot_hash": "9b2fc66d90202c4e",
+      "matured_counts": {
+        "w1": 95,
+        "w8": 88
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.103535,
+        "sharpe": 3.7138,
+        "mdd": -0.0009,
+        "win_rate": 0.25,
+        "avg_pos": 0.3
+      },
+      "evaluation_shadow_nav": 110353.521036,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.103535
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": -0.0711,
+        "champion_twr": 0.4589,
+        "dca_twr": 0.847,
+        "challenger_irr": -0.0993,
+        "champion_irr": 0.3608,
+        "dca_irr": 0.5854,
+        "challenger_mdd": -0.1519,
+        "champion_mdd": -0.1239,
+        "dca_mdd": -0.2522
+      }
+    },
+    {
+      "id": "CH_P002_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 1500.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 600.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 375.0
+            },
+            {
+              "feature": "d_dif2",
+              "weight": 150.0
+            },
+            {
+              "feature": "w_ma_align",
+              "weight": 450.0
+            },
+            {
+              "feature": "d_ma_align",
+              "weight": 225.0
+            },
+            {
+              "feature": "d_vol_ma5",
+              "weight": 75.0
+            },
+            {
+              "feature": "d_low20_dist",
+              "weight": 225.0
+            },
+            {
+              "feature": "d_high20_dist",
+              "weight": 300.0
+            },
+            {
+              "feature": "dd20",
+              "weight": -300.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_ma20_slope",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.3
+            },
+            {
+              "score_min": 5.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 40.0,
+              "weight": 0.7
+            },
+            {
+              "score_min": 300.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "ef38ab93863ae8eb",
+      "status": "REJECTED",
+      "challenge_type": "prediction",
+      "created_anchor": 8,
+      "forward_oos_start": 9,
+      "account_snapshot": {
+        "cash": 21430.61699714958,
+        "shares": 62125.02433704772,
+        "nav": 107163.150582
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@8",
+      "baseline_start_anchor": 9,
+      "baseline_account_snapshot_hash": "9b2fc66d90202c4e",
+      "matured_counts": {
+        "w1": 27,
+        "w8": 20
+      },
+      "low_effect": true,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.0,
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "avg_pos": 0.0
+      },
+      "evaluation_shadow_nav": 100000.0,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.0
+      },
+      "reject_reason": "LOW_EFFECT"
+    },
+    {
+      "id": "CH_P002_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 75.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "f0b4c310dbb84eb7",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 8,
+      "forward_oos_start": 9,
+      "account_snapshot": {
+        "cash": 21430.61699714958,
+        "shares": 62125.02433704772,
+        "nav": 107163.150582
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@8",
+      "baseline_start_anchor": 9,
+      "baseline_account_snapshot_hash": "9b2fc66d90202c4e",
+      "matured_counts": {
+        "w1": 95,
+        "w8": 88
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.087548,
+        "sharpe": 1.3732,
+        "mdd": -0.063893,
+        "win_rate": 0.125,
+        "avg_pos": 0.3333
+      },
+      "evaluation_shadow_nav": 108754.755219,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.087548
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.4745,
+        "champion_twr": 0.3855,
+        "dca_twr": 0.721,
+        "challenger_irr": 0.2331,
+        "champion_irr": 0.1919,
+        "dca_irr": 0.3477,
+        "challenger_mdd": -0.2801,
+        "champion_mdd": -0.2291,
+        "dca_mdd": -0.4277
+      }
+    },
+    {
+      "id": "CH_S001_2",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 1000.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        },
+        "ramp": {
+          "confirm_after_weeks": 2,
+          "initial_weight": 0.5,
+          "full_weight": 1.0,
+          "confirm_gate": [
+            {
+              "feature": "w_dif1",
+              "op": ">",
+              "value": 0.0
+            }
+          ]
+        }
+      },
+      "spec_hash": "39d47c721851ecbf",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "strategy",
+      "created_anchor": 8,
+      "forward_oos_start": 9,
+      "account_snapshot": {
+        "cash": 21430.61699714958,
+        "shares": 62125.02433704772,
+        "nav": 107163.150582
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@8",
+      "baseline_start_anchor": 9,
+      "baseline_account_snapshot_hash": "9b2fc66d90202c4e",
+      "matured_counts": {
+        "w1": 95,
+        "w8": 88
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.080267,
+        "sharpe": 2.5314,
+        "mdd": -0.0005,
+        "win_rate": 0.125,
+        "avg_pos": 0.1111
+      },
+      "evaluation_shadow_nav": 108026.742677,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.080267
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.0553,
+        "champion_twr": 0.0319,
+        "dca_twr": 0.1378,
+        "challenger_irr": 0.1364,
+        "champion_irr": 0.1287,
+        "dca_irr": 0.4652,
+        "challenger_mdd": -0.1394,
+        "champion_mdd": -0.1239,
+        "dca_mdd": -0.1384
+      }
+    },
+    {
+      "id": "CH_P003_2",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 1000.0
+            },
+            {
+              "feature": "d_dif2",
+              "weight": 500.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 500.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 300.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "w_ma_align",
+            "op": ">=",
+            "value": 0.5
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 5.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        }
+      },
+      "spec_hash": "403bf1c32afcb0a6",
+      "status": "REJECTED",
+      "challenge_type": "prediction",
+      "created_anchor": 12,
+      "forward_oos_start": 13,
+      "account_snapshot": {
+        "cash": 19208.071095107378,
+        "shares": 64027.49863463594,
+        "nav": 96041.069457
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@12",
+      "baseline_start_anchor": 13,
+      "baseline_account_snapshot_hash": "a359de0ead262a70",
+      "matured_counts": {
+        "w1": 27,
+        "w8": 20
+      },
+      "low_effect": true,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.0,
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "avg_pos": 0.0
+      },
+      "evaluation_shadow_nav": 100000.0,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.0
+      },
+      "reject_reason": "LOW_EFFECT"
+    },
+    {
+      "id": "CH_P003_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 125.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.06
+          }
+        ]
+      },
+      "spec_hash": "188d23005caf8553",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 12,
+      "forward_oos_start": 13,
+      "account_snapshot": {
+        "cash": 19208.071095107378,
+        "shares": 64027.49863463594,
+        "nav": 96041.069457
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@12",
+      "baseline_start_anchor": 13,
+      "baseline_account_snapshot_hash": "a359de0ead262a70",
+      "matured_counts": {
+        "w1": 91,
+        "w8": 84
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.132319,
+        "sharpe": -1.6812,
+        "mdd": -0.143755,
+        "win_rate": 0.0833,
+        "avg_pos": 0.3077
+      },
+      "evaluation_shadow_nav": 86768.133627,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.132319
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.6734,
+        "champion_twr": 0.3973,
+        "dca_twr": 0.7402,
+        "challenger_irr": 0.4403,
+        "champion_irr": 0.1936,
+        "dca_irr": 0.3489,
+        "challenger_mdd": -0.1359,
+        "champion_mdd": -0.2291,
+        "dca_mdd": -0.4277
+      }
+    },
+    {
+      "id": "CH_P003_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 2000.0
+            },
+            {
+              "feature": "mom20",
+              "weight": 100.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.9
+            }
+          ],
+          "min": 0.0,
+          "max": 0.9
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "d47f63a9808ee194",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 12,
+      "forward_oos_start": 13,
+      "account_snapshot": {
+        "cash": 19208.071095107378,
+        "shares": 64027.49863463594,
+        "nav": 96041.069457
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@12",
+      "baseline_start_anchor": 13,
+      "baseline_account_snapshot_hash": "a359de0ead262a70",
+      "matured_counts": {
+        "w1": 91,
+        "w8": 84
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.010539,
+        "sharpe": 0.3036,
+        "mdd": -0.128493,
+        "win_rate": 0.1667,
+        "avg_pos": 0.4154
+      },
+      "evaluation_shadow_nav": 101053.861917,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.010539
+      },
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.2608,
+        "champion_twr": 0.2847,
+        "dca_twr": 0.3957,
+        "challenger_irr": 0.1014,
+        "champion_irr": 0.1007,
+        "dca_irr": 0.1052,
+        "challenger_mdd": -0.133,
+        "champion_mdd": -0.2291,
+        "dca_mdd": -0.4277
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      }
+    },
+    {
+      "id": "CH_P004_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_slope",
+              "weight": 10.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 1000.0
+            },
+            {
+              "feature": "mom20",
+              "weight": 20.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "c0c1b840769f179f",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 16,
+      "forward_oos_start": 17,
+      "account_snapshot": {
+        "cash": 94045.33232422889,
+        "shares": 0.0,
+        "nav": 94045.332324
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@16",
+      "baseline_start_anchor": 17,
+      "baseline_account_snapshot_hash": "94c133bbbf31ed35",
+      "matured_counts": {
+        "w1": 87,
+        "w8": 80
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.069065,
+        "sharpe": 0.6882,
+        "mdd": -0.142754,
+        "win_rate": 0.25,
+        "avg_pos": 0.4118
+      },
+      "evaluation_shadow_nav": 106906.459308,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.069065
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.2305,
+        "champion_twr": 0.3298,
+        "dca_twr": 0.8546,
+        "challenger_irr": 0.248,
+        "champion_irr": 0.4256,
+        "dca_irr": 0.9443,
+        "challenger_mdd": -0.1196,
+        "champion_mdd": -0.1015,
+        "dca_mdd": -0.1438
+      }
+    },
+    {
+      "id": "CH_P004_3",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 150.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.06
+          }
+        ]
+      },
+      "spec_hash": "eaa714539fc432ff",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 16,
+      "forward_oos_start": 17,
+      "account_snapshot": {
+        "cash": 94045.33232422889,
+        "shares": 0.0,
+        "nav": 94045.332324
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@16",
+      "baseline_start_anchor": 17,
+      "baseline_account_snapshot_hash": "94c133bbbf31ed35",
+      "matured_counts": {
+        "w1": 87,
+        "w8": 80
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.132319,
+        "sharpe": -1.4616,
+        "mdd": -0.143755,
+        "win_rate": 0.0625,
+        "avg_pos": 0.2353
+      },
+      "evaluation_shadow_nav": 86768.133627,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.132319
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.6734,
+        "champion_twr": 0.3973,
+        "dca_twr": 0.7938,
+        "challenger_irr": 0.4521,
+        "champion_irr": 0.1927,
+        "dca_irr": 0.3419,
+        "challenger_mdd": -0.1359,
+        "champion_mdd": -0.2291,
+        "dca_mdd": -0.4277
+      }
+    },
+    {
+      "id": "CH_P004_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 1750.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 700.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 437.5
+            },
+            {
+              "feature": "d_dif2",
+              "weight": 175.0
+            },
+            {
+              "feature": "w_ma_align",
+              "weight": 525.0
+            },
+            {
+              "feature": "d_ma_align",
+              "weight": 262.5
+            },
+            {
+              "feature": "d_vol_ma5",
+              "weight": 87.5
+            },
+            {
+              "feature": "d_low20_dist",
+              "weight": 262.5
+            },
+            {
+              "feature": "d_high20_dist",
+              "weight": 350.0
+            },
+            {
+              "feature": "dd20",
+              "weight": -350.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_ma20_slope",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.3
+            },
+            {
+              "score_min": 5.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 40.0,
+              "weight": 0.7
+            },
+            {
+              "score_min": 300.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "510b284c7671d071",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 16,
+      "forward_oos_start": 17,
+      "account_snapshot": {
+        "cash": 94045.33232422889,
+        "shares": 0.0,
+        "nav": 94045.332324
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@16",
+      "baseline_start_anchor": 17,
+      "baseline_account_snapshot_hash": "94c133bbbf31ed35",
+      "matured_counts": {
+        "w1": 87,
+        "w8": 80
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.013487,
+        "sharpe": -1.8756,
+        "mdd": -0.013487,
+        "win_rate": 0.0,
+        "avg_pos": 0.0294
+      },
+      "evaluation_shadow_nav": 98651.25,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.013487
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.489,
+        "champion_twr": 0.3042,
+        "dca_twr": 0.5894,
+        "challenger_irr": 0.2418,
+        "champion_irr": 0.1298,
+        "dca_irr": 0.2211,
+        "challenger_mdd": -0.1751,
+        "champion_mdd": -0.2174,
+        "dca_mdd": -0.3701
+      }
+    },
+    {
+      "id": "CH_P004_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_slope",
+              "weight": 10.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 1000.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        },
+        "gates": [
+          {
+            "feature": "d_slope",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "9f747b12eab6b928",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 16,
+      "forward_oos_start": 17,
+      "account_snapshot": {
+        "cash": 94045.33232422889,
+        "shares": 0.0,
+        "nav": 94045.332324
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@16",
+      "baseline_start_anchor": 17,
+      "baseline_account_snapshot_hash": "94c133bbbf31ed35",
+      "matured_counts": {
+        "w1": 87,
+        "w8": 80
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.0011,
+        "sharpe": 0.2196,
+        "mdd": -0.193149,
+        "win_rate": 0.25,
+        "avg_pos": 0.5294
+      },
+      "evaluation_shadow_nav": 100109.986652,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.0011
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_S002_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 2000.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 2000.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "d_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.75
+            }
+          ],
+          "min": 0.0,
+          "max": 0.75
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "spec_hash": "20ada2d28bc853d5",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "strategy",
+      "created_anchor": 16,
+      "forward_oos_start": 17,
+      "account_snapshot": {
+        "cash": 94045.33232422889,
+        "shares": 0.0,
+        "nav": 94045.332324
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@16",
+      "baseline_start_anchor": 17,
+      "baseline_account_snapshot_hash": "94c133bbbf31ed35",
+      "matured_counts": {
+        "w1": 87,
+        "w8": 80
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.023324,
+        "sharpe": -0.1096,
+        "mdd": -0.128304,
+        "win_rate": 0.0625,
+        "avg_pos": 0.1324
+      },
+      "evaluation_shadow_nav": 97667.575868,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.023324
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P005_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 87.5
+            },
+            {
+              "feature": "rsi14",
+              "weight": -0.875
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.6
+            }
+          ],
+          "min": 0.0,
+          "max": 0.6
+        }
+      },
+      "spec_hash": "949387468c67a838",
+      "status": "REJECTED",
+      "challenge_type": "prediction",
+      "created_anchor": 20,
+      "forward_oos_start": 21,
+      "account_snapshot": {
+        "cash": 90589.62542164276,
+        "shares": 0.0,
+        "nav": 90589.625422
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@20",
+      "baseline_start_anchor": 21,
+      "baseline_account_snapshot_hash": "2b15caeaa2fded09",
+      "matured_counts": {
+        "w1": 27,
+        "w8": 20
+      },
+      "low_effect": true,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.0,
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "avg_pos": 0.0
+      },
+      "evaluation_shadow_nav": 100000.0,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.0
+      },
+      "reject_reason": "LOW_EFFECT"
+    },
+    {
+      "id": "CH_P005_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 1000.0
+            },
+            {
+              "feature": "mom20",
+              "weight": 50.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.9
+            }
+          ],
+          "min": 0.0,
+          "max": 0.9
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "4c4c3d03dcadc031",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 20,
+      "forward_oos_start": 21,
+      "account_snapshot": {
+        "cash": 90589.62542164276,
+        "shares": 0.0,
+        "nav": 90589.625422
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@20",
+      "baseline_start_anchor": 21,
+      "baseline_account_snapshot_hash": "2b15caeaa2fded09",
+      "matured_counts": {
+        "w1": 83,
+        "w8": 76
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.013085,
+        "sharpe": 0.0575,
+        "mdd": -0.137719,
+        "win_rate": 0.1,
+        "avg_pos": 0.2571
+      },
+      "evaluation_shadow_nav": 98691.472788,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.013085
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.3806,
+        "champion_twr": 0.4604,
+        "dca_twr": 0.9845,
+        "challenger_irr": 0.8269,
+        "champion_irr": 1.0774,
+        "dca_irr": 2.0023,
+        "challenger_mdd": -0.1047,
+        "champion_mdd": -0.0931,
+        "dca_mdd": -0.1163
+      }
+    },
+    {
+      "id": "CH_P006_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 1500.0
+            },
+            {
+              "feature": "d_dif2",
+              "weight": 750.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 750.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 450.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "w_ma_align",
+            "op": ">=",
+            "value": 0.5
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 5.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        }
+      },
+      "spec_hash": "d5cb92b3d7fd1233",
+      "status": "REJECTED",
+      "challenge_type": "prediction",
+      "created_anchor": 24,
+      "forward_oos_start": 25,
+      "account_snapshot": {
+        "cash": 18307.493940150438,
+        "shares": 63623.82708256982,
+        "nav": 91538.518912
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@24",
+      "baseline_start_anchor": 25,
+      "baseline_account_snapshot_hash": "8529a83b0b80d64e",
+      "matured_counts": {
+        "w1": 27,
+        "w8": 20
+      },
+      "low_effect": true,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.0,
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "avg_pos": 0.0
+      },
+      "evaluation_shadow_nav": 100000.0,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.0
+      },
+      "reject_reason": "LOW_EFFECT"
+    },
+    {
+      "id": "CH_P006_3",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "dd20",
+              "weight": -17.5
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 875.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.5
+            }
+          ],
+          "min": 0.0,
+          "max": 0.5
+        }
+      },
+      "spec_hash": "3f3a18322db12e2a",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 24,
+      "forward_oos_start": 25,
+      "account_snapshot": {
+        "cash": 18307.493940150438,
+        "shares": 63623.82708256982,
+        "nav": 91538.518912
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@24",
+      "baseline_start_anchor": 25,
+      "baseline_account_snapshot_hash": "8529a83b0b80d64e",
+      "matured_counts": {
+        "w1": 79,
+        "w8": 72
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.084449,
+        "sharpe": 1.0028,
+        "mdd": -0.086911,
+        "win_rate": 0.5417,
+        "avg_pos": 0.38
+      },
+      "evaluation_shadow_nav": 108390.643825,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.084449
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P006_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 200.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.06
+          }
+        ]
+      },
+      "spec_hash": "df4f33ad28a01d2c",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 24,
+      "forward_oos_start": 25,
+      "account_snapshot": {
+        "cash": 18307.493940150438,
+        "shares": 63623.82708256982,
+        "nav": 91538.518912
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@24",
+      "baseline_start_anchor": 25,
+      "baseline_account_snapshot_hash": "8529a83b0b80d64e",
+      "matured_counts": {
+        "w1": 79,
+        "w8": 72
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.133186,
+        "sharpe": -1.2074,
+        "mdd": -0.143755,
+        "win_rate": 0.0417,
+        "avg_pos": 0.2
+      },
+      "evaluation_shadow_nav": 86681.365493,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.133186
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.6434,
+        "champion_twr": 0.4115,
+        "dca_twr": 0.7372,
+        "challenger_irr": 0.4748,
+        "champion_irr": 0.1816,
+        "dca_irr": 0.3085,
+        "challenger_mdd": -0.1359,
+        "champion_mdd": -0.2291,
+        "dca_mdd": -0.4277
+      }
+    },
+    {
+      "id": "CH_S003_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 1500.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 1500.0
+            }
+          ]
+        },
+        "position": {
+          "type": "linear",
+          "slope": 0.15,
+          "intercept": 0.2,
+          "min": 0.2,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "05fe2d8303e27415",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "strategy",
+      "created_anchor": 24,
+      "forward_oos_start": 25,
+      "account_snapshot": {
+        "cash": 18307.493940150438,
+        "shares": 63623.82708256982,
+        "nav": 91538.518912
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@24",
+      "baseline_start_anchor": 25,
+      "baseline_account_snapshot_hash": "8529a83b0b80d64e",
+      "matured_counts": {
+        "w1": 79,
+        "w8": 72
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.062246,
+        "sharpe": 0.5419,
+        "mdd": -0.170822,
+        "win_rate": 0.5833,
+        "avg_pos": 0.4341
+      },
+      "evaluation_shadow_nav": 106203.332578,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.062246
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_S003_2",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 1000.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 1000.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "d_dif1",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 5.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "99579e92056e9eca",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "strategy",
+      "created_anchor": 24,
+      "forward_oos_start": 25,
+      "account_snapshot": {
+        "cash": 18307.493940150438,
+        "shares": 63623.82708256982,
+        "nav": 91538.518912
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@24",
+      "baseline_start_anchor": 25,
+      "baseline_account_snapshot_hash": "8529a83b0b80d64e",
+      "matured_counts": {
+        "w1": 79,
+        "w8": 72
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.019113,
+        "sharpe": 0.2819,
+        "mdd": -0.170378,
+        "win_rate": 0.2083,
+        "avg_pos": 0.22
+      },
+      "evaluation_shadow_nav": 101911.308224,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.019113
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_S003_3",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 1000.0
+            },
+            {
+              "feature": "d_dif2",
+              "weight": 1000.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "d_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "d_dif2",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        },
+        "ramp": {
+          "confirm_after_weeks": 2,
+          "initial_weight": 0.5,
+          "full_weight": 1.0,
+          "confirm_gate": [
+            {
+              "feature": "d_dif1",
+              "op": ">",
+              "value": 0.0
+            },
+            {
+              "feature": "d_dif2",
+              "op": ">",
+              "value": 0.0
+            }
+          ]
+        }
+      },
+      "spec_hash": "fe5d17fdd1ce7818",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "strategy",
+      "created_anchor": 24,
+      "forward_oos_start": 25,
+      "account_snapshot": {
+        "cash": 18307.493940150438,
+        "shares": 63623.82708256982,
+        "nav": 91538.518912
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@24",
+      "baseline_start_anchor": 25,
+      "baseline_account_snapshot_hash": "8529a83b0b80d64e",
+      "matured_counts": {
+        "w1": 79,
+        "w8": 72
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.022152,
+        "sharpe": -0.3185,
+        "mdd": -0.087035,
+        "win_rate": 0.2083,
+        "avg_pos": 0.16
+      },
+      "evaluation_shadow_nav": 97784.80257,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.022152
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P007_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif2",
+              "weight": 1750.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 875.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.9
+            }
+          ],
+          "min": 0.0,
+          "max": 0.9
+        },
+        "gates": [
+          {
+            "feature": "d_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "d_dif2",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "c9d8bf541ffc3dab",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 28,
+      "forward_oos_start": 29,
+      "account_snapshot": {
+        "cash": 18425.274385836292,
+        "shares": 63536.7793084486,
+        "nav": 92127.938384
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@28",
+      "baseline_start_anchor": 29,
+      "baseline_account_snapshot_hash": "0c801038db977053",
+      "matured_counts": {
+        "w1": 75,
+        "w8": 68
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.070017,
+        "sharpe": -0.5133,
+        "mdd": -0.158028,
+        "win_rate": 0.2143,
+        "avg_pos": 0.3103
+      },
+      "evaluation_shadow_nav": 92998.279129,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.070017
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P007_3",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 62.5
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "c07442a198bb6762",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 28,
+      "forward_oos_start": 29,
+      "account_snapshot": {
+        "cash": 18425.274385836292,
+        "shares": 63536.7793084486,
+        "nav": 92127.938384
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@28",
+      "baseline_start_anchor": 29,
+      "baseline_account_snapshot_hash": "0c801038db977053",
+      "matured_counts": {
+        "w1": 75,
+        "w8": 68
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.102709,
+        "sharpe": -0.4294,
+        "mdd": -0.192733,
+        "win_rate": 0.1786,
+        "avg_pos": 0.4828
+      },
+      "evaluation_shadow_nav": 89729.096991,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.102709
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.5747,
+        "champion_twr": 0.4591,
+        "dca_twr": 0.8114,
+        "challenger_irr": 0.2115,
+        "champion_irr": 0.1746,
+        "dca_irr": 0.2881,
+        "challenger_mdd": -0.2801,
+        "champion_mdd": -0.2291,
+        "dca_mdd": -0.4277
+      }
+    },
+    {
+      "id": "CH_P007_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 1000.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 400.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 250.0
+            },
+            {
+              "feature": "d_dif2",
+              "weight": 100.0
+            },
+            {
+              "feature": "w_ma_align",
+              "weight": 300.0
+            },
+            {
+              "feature": "d_ma_align",
+              "weight": 150.0
+            },
+            {
+              "feature": "d_vol_ma5",
+              "weight": 50.0
+            },
+            {
+              "feature": "d_low20_dist",
+              "weight": 150.0
+            },
+            {
+              "feature": "d_high20_dist",
+              "weight": 200.0
+            },
+            {
+              "feature": "dd20",
+              "weight": -200.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_ma20_slope",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.3
+            },
+            {
+              "score_min": 5.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 40.0,
+              "weight": 0.7
+            },
+            {
+              "score_min": 300.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "5e7ba1fbe3a0d790",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 28,
+      "forward_oos_start": 29,
+      "account_snapshot": {
+        "cash": 18425.274385836292,
+        "shares": 63536.7793084486,
+        "nav": 92127.938384
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@28",
+      "baseline_start_anchor": 29,
+      "baseline_account_snapshot_hash": "0c801038db977053",
+      "matured_counts": {
+        "w1": 75,
+        "w8": 68
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.005864,
+        "sharpe": 0.2356,
+        "mdd": -0.026219,
+        "win_rate": 0.1071,
+        "avg_pos": 0.131
+      },
+      "evaluation_shadow_nav": 100586.408598,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.005864
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P008_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 4000.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 2000.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.75
+            }
+          ],
+          "min": 0.0,
+          "max": 0.75
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "d164ea9af302a662",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 32,
+      "forward_oos_start": 33,
+      "account_snapshot": {
+        "cash": 18740.15121283194,
+        "shares": 58290.03174438576,
+        "nav": 93701.132036
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@32",
+      "baseline_start_anchor": 33,
+      "baseline_account_snapshot_hash": "3dc3c8f3b6f1a288",
+      "matured_counts": {
+        "w1": 71,
+        "w8": 64
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.036359,
+        "sharpe": 0.3671,
+        "mdd": -0.136498,
+        "win_rate": 0.2188,
+        "avg_pos": 0.2955
+      },
+      "evaluation_shadow_nav": 103635.866652,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.036359
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P008_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 87.5
+            },
+            {
+              "feature": "vol_pct",
+              "weight": -17.5
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.75
+            }
+          ],
+          "min": 0.0,
+          "max": 0.75
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "3d7f224effd7a358",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 32,
+      "forward_oos_start": 33,
+      "account_snapshot": {
+        "cash": 18740.15121283194,
+        "shares": 58290.03174438576,
+        "nav": 93701.132036
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@32",
+      "baseline_start_anchor": 33,
+      "baseline_account_snapshot_hash": "3dc3c8f3b6f1a288",
+      "matured_counts": {
+        "w1": 71,
+        "w8": 64
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.008222,
+        "sharpe": -0.1984,
+        "mdd": -0.033583,
+        "win_rate": 0.0938,
+        "avg_pos": 0.1364
+      },
+      "evaluation_shadow_nav": 99177.75693,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.008222
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P008_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 75.0
+            },
+            {
+              "feature": "rsi14",
+              "weight": -0.75
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.6
+            }
+          ],
+          "min": 0.0,
+          "max": 0.6
+        }
+      },
+      "spec_hash": "c78d654be9022b47",
+      "status": "REJECTED",
+      "challenge_type": "prediction",
+      "created_anchor": 32,
+      "forward_oos_start": 33,
+      "account_snapshot": {
+        "cash": 18740.15121283194,
+        "shares": 58290.03174438576,
+        "nav": 93701.132036
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@32",
+      "baseline_start_anchor": 33,
+      "baseline_account_snapshot_hash": "3dc3c8f3b6f1a288",
+      "matured_counts": {
+        "w1": 27,
+        "w8": 20
+      },
+      "low_effect": true,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.0,
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "avg_pos": 0.0
+      },
+      "evaluation_shadow_nav": 100000.0,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.0
+      },
+      "reject_reason": "LOW_EFFECT"
+    },
+    {
+      "id": "CH_P009_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif2",
+              "weight": 2000.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 1000.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.9
+            }
+          ],
+          "min": 0.0,
+          "max": 0.9
+        },
+        "gates": [
+          {
+            "feature": "d_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "d_dif2",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "7bfa92e74a149915",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 36,
+      "forward_oos_start": 37,
+      "account_snapshot": {
+        "cash": 20137.31597207516,
+        "shares": 57455.63609407253,
+        "nav": 100690.117776
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@36",
+      "baseline_start_anchor": 37,
+      "baseline_account_snapshot_hash": "7686a86bf749f0bd",
+      "matured_counts": {
+        "w1": 67,
+        "w8": 60
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.085458,
+        "sharpe": -0.4046,
+        "mdd": -0.211945,
+        "win_rate": 0.25,
+        "avg_pos": 0.3405
+      },
+      "evaluation_shadow_nav": 91454.155132,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.085458
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P009_2",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 1750.0
+            },
+            {
+              "feature": "d_dif2",
+              "weight": 875.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 875.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 525.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "w_ma_align",
+            "op": ">=",
+            "value": 0.5
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 5.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        }
+      },
+      "spec_hash": "e51ecc6a362aad04",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 36,
+      "forward_oos_start": 37,
+      "account_snapshot": {
+        "cash": 20137.31597207516,
+        "shares": 57455.63609407253,
+        "nav": 100690.117776
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@36",
+      "baseline_start_anchor": 37,
+      "baseline_account_snapshot_hash": "7686a86bf749f0bd",
+      "matured_counts": {
+        "w1": 67,
+        "w8": 60
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.013151,
+        "sharpe": -0.0716,
+        "mdd": -0.095311,
+        "win_rate": 0.0833,
+        "avg_pos": 0.1081
+      },
+      "evaluation_shadow_nav": 98684.887737,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.013151
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P009_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "dd20",
+              "weight": -20.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 1000.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.5
+            }
+          ],
+          "min": 0.0,
+          "max": 0.5
+        }
+      },
+      "spec_hash": "216821c1b89e0bb6",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 36,
+      "forward_oos_start": 37,
+      "account_snapshot": {
+        "cash": 20137.31597207516,
+        "shares": 57455.63609407253,
+        "nav": 100690.117776
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@36",
+      "baseline_start_anchor": 37,
+      "baseline_account_snapshot_hash": "7686a86bf749f0bd",
+      "matured_counts": {
+        "w1": 67,
+        "w8": 60
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.081172,
+        "sharpe": 0.7104,
+        "mdd": -0.086911,
+        "win_rate": 0.5,
+        "avg_pos": 0.3649
+      },
+      "evaluation_shadow_nav": 108063.131447,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.081172
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P010_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "dd20",
+              "weight": -10.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 500.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.5
+            }
+          ],
+          "min": 0.0,
+          "max": 0.5
+        }
+      },
+      "spec_hash": "09aa27199ea4c3e6",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 40,
+      "forward_oos_start": 41,
+      "account_snapshot": {
+        "cash": 97392.14095836939,
+        "shares": 0.0,
+        "nav": 97392.140958
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@40",
+      "baseline_start_anchor": 41,
+      "baseline_account_snapshot_hash": "38648ec993bf642e",
+      "matured_counts": {
+        "w1": 63,
+        "w8": 56
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.062912,
+        "sharpe": 0.5426,
+        "mdd": -0.086911,
+        "win_rate": 0.45,
+        "avg_pos": 0.3293
+      },
+      "evaluation_shadow_nav": 106238.056477,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.062912
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_S005_3",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 1000.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 300.0
+            },
+            {
+              "feature": "w_ma_align",
+              "weight": 400.0
+            },
+            {
+              "feature": "d_ma_align",
+              "weight": 200.0
+            },
+            {
+              "feature": "d_vol_ma5",
+              "weight": 60.0
+            },
+            {
+              "feature": "dd20",
+              "weight": -300.0
+            },
+            {
+              "feature": "d_high20_dist",
+              "weight": 300.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_ma20_slope",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 10.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "spec_hash": "e8191436a9b90138",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "strategy",
+      "created_anchor": 40,
+      "forward_oos_start": 41,
+      "account_snapshot": {
+        "cash": 97392.14095836939,
+        "shares": 0.0,
+        "nav": 97392.140958
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@40",
+      "baseline_start_anchor": 41,
+      "baseline_account_snapshot_hash": "38648ec993bf642e",
+      "matured_counts": {
+        "w1": 63,
+        "w8": 56
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.046039,
+        "sharpe": 0.4013,
+        "mdd": -0.098918,
+        "win_rate": 0.2,
+        "avg_pos": 0.2854
+      },
+      "evaluation_shadow_nav": 104603.880105,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.046039
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": true,
+        "challenger_twr": 0.3221,
+        "champion_twr": 0.2346,
+        "dca_twr": 0.1436,
+        "challenger_irr": 0.1376,
+        "champion_irr": -0.0042,
+        "dca_irr": -0.1462,
+        "challenger_mdd": -0.133,
+        "champion_mdd": -0.2291,
+        "dca_mdd": -0.4277
+      }
+    },
+    {
+      "id": "CH_P011_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 87.5
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "e7097431ebb781e9",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 44,
+      "forward_oos_start": 45,
+      "account_snapshot": {
+        "cash": 20598.57424579502,
+        "shares": 53925.88818841978,
+        "nav": 102997.331398
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@44",
+      "baseline_start_anchor": 45,
+      "baseline_account_snapshot_hash": "9c1a7f2a7e79ebf0",
+      "matured_counts": {
+        "w1": 59,
+        "w8": 52
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.026916,
+        "sharpe": 0.2614,
+        "mdd": -0.238792,
+        "win_rate": 0.2955,
+        "avg_pos": 0.6
+      },
+      "evaluation_shadow_nav": 102691.597515,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.026916
+      },
+      "_cashflow": {
+        "pass": false,
+        "challenger_twr": 0.4052,
+        "champion_twr": 0.327,
+        "dca_twr": 0.41,
+        "challenger_irr": 0.1377,
+        "champion_irr": 0.117,
+        "dca_irr": 0.1898,
+        "challenger_mdd": -0.2801,
+        "champion_mdd": -0.2291,
+        "dca_mdd": -0.4277
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      }
+    },
+    {
+      "id": "CH_P012_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif2",
+              "weight": 1250.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 625.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.9
+            }
+          ],
+          "min": 0.0,
+          "max": 0.9
+        },
+        "gates": [
+          {
+            "feature": "d_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "d_dif2",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "140731a570897e7c",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 48,
+      "forward_oos_start": 49,
+      "account_snapshot": {
+        "cash": 99696.61229315207,
+        "shares": 0.0,
+        "nav": 99696.612293
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@48",
+      "baseline_start_anchor": 49,
+      "baseline_account_snapshot_hash": "f01c316c23939808",
+      "matured_counts": {
+        "w1": 55,
+        "w8": 48
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.071825,
+        "sharpe": -0.2384,
+        "mdd": -0.211945,
+        "win_rate": 0.2292,
+        "avg_pos": 0.3306
+      },
+      "evaluation_shadow_nav": 92817.469667,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.071825
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_S006_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 1500.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 1500.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.25
+            },
+            {
+              "score_min": 5.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 10.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "b7975e408f6ce6e2",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "strategy",
+      "created_anchor": 48,
+      "forward_oos_start": 49,
+      "account_snapshot": {
+        "cash": 99696.61229315207,
+        "shares": 0.0,
+        "nav": 99696.612293
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@48",
+      "baseline_start_anchor": 49,
+      "baseline_account_snapshot_hash": "f01c316c23939808",
+      "matured_counts": {
+        "w1": 55,
+        "w8": 48
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.01022,
+        "sharpe": 0.1042,
+        "mdd": -0.198264,
+        "win_rate": 0.3125,
+        "avg_pos": 0.3163
+      },
+      "evaluation_shadow_nav": 98977.951983,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.01022
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P013_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 62.5
+            },
+            {
+              "feature": "rsi14",
+              "weight": -0.625
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.6
+            }
+          ],
+          "min": 0.0,
+          "max": 0.6
+        }
+      },
+      "spec_hash": "4c374e6e08e48061",
+      "status": "REJECTED",
+      "challenge_type": "prediction",
+      "created_anchor": 52,
+      "forward_oos_start": 53,
+      "account_snapshot": {
+        "cash": 19666.134986233956,
+        "shares": 51553.82623505502,
+        "nav": 98646.596778
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@52",
+      "baseline_start_anchor": 53,
+      "baseline_account_snapshot_hash": "b626edc928277c1d",
+      "matured_counts": {
+        "w1": 27,
+        "w8": 20
+      },
+      "low_effect": true,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.0,
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "avg_pos": 0.0
+      },
+      "evaluation_shadow_nav": 100000.0,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.0
+      },
+      "reject_reason": "LOW_EFFECT"
+    },
+    {
+      "id": "CH_P013_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 2000.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 800.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 500.0
+            },
+            {
+              "feature": "d_dif2",
+              "weight": 200.0
+            },
+            {
+              "feature": "w_ma_align",
+              "weight": 600.0
+            },
+            {
+              "feature": "d_ma_align",
+              "weight": 300.0
+            },
+            {
+              "feature": "d_vol_ma5",
+              "weight": 100.0
+            },
+            {
+              "feature": "d_low20_dist",
+              "weight": 300.0
+            },
+            {
+              "feature": "d_high20_dist",
+              "weight": 400.0
+            },
+            {
+              "feature": "dd20",
+              "weight": -400.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_ma20_slope",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.3
+            },
+            {
+              "score_min": 5.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 40.0,
+              "weight": 0.7
+            },
+            {
+              "score_min": 300.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "aa6bc26c0df81427",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 52,
+      "forward_oos_start": 53,
+      "account_snapshot": {
+        "cash": 19666.134986233956,
+        "shares": 51553.82623505502,
+        "nav": 98646.596778
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@52",
+      "baseline_start_anchor": 53,
+      "baseline_account_snapshot_hash": "b626edc928277c1d",
+      "matured_counts": {
+        "w1": 51,
+        "w8": 44
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.060509,
+        "sharpe": 0.3701,
+        "mdd": -0.120633,
+        "win_rate": 0.2308,
+        "avg_pos": 0.4321
+      },
+      "evaluation_shadow_nav": 106050.863703,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.060509
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P014_3",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 3000.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 1500.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.75
+            }
+          ],
+          "min": 0.0,
+          "max": 0.75
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "3caa94c20244aec1",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 56,
+      "forward_oos_start": 57,
+      "account_snapshot": {
+        "cash": 22972.02170316841,
+        "shares": 49672.09357179171,
+        "nav": 114865.394811
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@56",
+      "baseline_start_anchor": 57,
+      "baseline_account_snapshot_hash": "2cf259f3b1253082",
+      "matured_counts": {
+        "w1": 47,
+        "w8": 40
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.148031,
+        "sharpe": 0.6569,
+        "mdd": -0.141496,
+        "win_rate": 0.2679,
+        "avg_pos": 0.3816
+      },
+      "evaluation_shadow_nav": 114803.139448,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.148031
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P014_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 2000.0
+            },
+            {
+              "feature": "d_dif2",
+              "weight": 1000.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 1000.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 600.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "w_ma_align",
+            "op": ">=",
+            "value": 0.5
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 5.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        }
+      },
+      "spec_hash": "c6a40b01ff33c9f1",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 56,
+      "forward_oos_start": 57,
+      "account_snapshot": {
+        "cash": 22972.02170316841,
+        "shares": 49672.09357179171,
+        "nav": 114865.394811
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@56",
+      "baseline_start_anchor": 57,
+      "baseline_account_snapshot_hash": "2cf259f3b1253082",
+      "matured_counts": {
+        "w1": 47,
+        "w8": 40
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.032851,
+        "sharpe": 0.279,
+        "mdd": -0.095311,
+        "win_rate": 0.125,
+        "avg_pos": 0.1772
+      },
+      "evaluation_shadow_nav": 103285.056573,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.032851
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P015_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 1750.0
+            },
+            {
+              "feature": "mom20",
+              "weight": 87.5
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.9
+            }
+          ],
+          "min": 0.0,
+          "max": 0.9
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "ecc2a000dc85d9d0",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 60,
+      "forward_oos_start": 61,
+      "account_snapshot": {
+        "cash": 26263.48858145712,
+        "shares": 48128.6758178957,
+        "nav": 131328.387892
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@60",
+      "baseline_start_anchor": 61,
+      "baseline_account_snapshot_hash": "18cb0080cca42d86",
+      "matured_counts": {
+        "w1": 43,
+        "w8": 36
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.348959,
+        "sharpe": 0.998,
+        "mdd": -0.182065,
+        "win_rate": 0.3167,
+        "avg_pos": 0.5164
+      },
+      "evaluation_shadow_nav": 134895.941417,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.348959
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P015_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 100.0
+            },
+            {
+              "feature": "vol_pct",
+              "weight": -20.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.75
+            }
+          ],
+          "min": 0.0,
+          "max": 0.75
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "4424be8bc794081b",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 60,
+      "forward_oos_start": 61,
+      "account_snapshot": {
+        "cash": 26263.48858145712,
+        "shares": 48128.6758178957,
+        "nav": 131328.387892
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@60",
+      "baseline_start_anchor": 61,
+      "baseline_account_snapshot_hash": "18cb0080cca42d86",
+      "matured_counts": {
+        "w1": 43,
+        "w8": 36
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.075255,
+        "sharpe": -0.5222,
+        "mdd": -0.157509,
+        "win_rate": 0.1,
+        "avg_pos": 0.1475
+      },
+      "evaluation_shadow_nav": 92474.521303,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.075255
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P016_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 2000.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "8601c245a69a0387",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 64,
+      "forward_oos_start": 65,
+      "account_snapshot": {
+        "cash": 23810.61666574377,
+        "shares": 49348.59346545356,
+        "nav": 119053.402054
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@64",
+      "baseline_start_anchor": 65,
+      "baseline_account_snapshot_hash": "2c9795c343968452",
+      "matured_counts": {
+        "w1": 39,
+        "w8": 32
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.197357,
+        "sharpe": 0.6736,
+        "mdd": -0.150514,
+        "win_rate": 0.3125,
+        "avg_pos": 0.48
+      },
+      "evaluation_shadow_nav": 119735.728442,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.197357
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_S008_2",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 2000.0
+            },
+            {
+              "feature": "mom20",
+              "weight": 100.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          },
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "7f62006da93b09ba",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "strategy",
+      "created_anchor": 64,
+      "forward_oos_start": 65,
+      "account_snapshot": {
+        "cash": 23810.61666574377,
+        "shares": 49348.59346545356,
+        "nav": 119053.402054
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@64",
+      "baseline_start_anchor": 65,
+      "baseline_account_snapshot_hash": "2c9795c343968452",
+      "matured_counts": {
+        "w1": 39,
+        "w8": 32
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.218992,
+        "sharpe": 0.6406,
+        "mdd": -0.202146,
+        "win_rate": 0.2969,
+        "avg_pos": 0.5692
+      },
+      "evaluation_shadow_nav": 121899.171086,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.218992
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE",
+      "_cashflow": {
+        "pass": true,
+        "challenger_twr": 0.1361,
+        "champion_twr": 0.0971,
+        "dca_twr": 0.0588,
+        "challenger_irr": 0.2579,
+        "champion_irr": 0.0043,
+        "dca_irr": 0.0439,
+        "challenger_mdd": -0.1474,
+        "champion_mdd": -0.2291,
+        "dca_mdd": -0.4277
+      }
+    },
+    {
+      "id": "CH_P017_2",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_slope",
+              "weight": 12.5
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 1250.0
+            },
+            {
+              "feature": "mom20",
+              "weight": 25.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "1461264a381e77dd",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 68,
+      "forward_oos_start": 69,
+      "account_snapshot": {
+        "cash": 118613.0645545769,
+        "shares": 0.0,
+        "nav": 118613.064555
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@68",
+      "baseline_start_anchor": 69,
+      "baseline_account_snapshot_hash": "35efbd7da466e778",
+      "matured_counts": {
+        "w1": 35,
+        "w8": 28
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.203639,
+        "sharpe": 0.606,
+        "mdd": -0.142754,
+        "win_rate": 0.2794,
+        "avg_pos": 0.4928
+      },
+      "evaluation_shadow_nav": 120363.911255,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.203639
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P017_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 1500.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 600.0
+            },
+            {
+              "feature": "d_dif1",
+              "weight": 375.0
+            },
+            {
+              "feature": "d_dif2",
+              "weight": 150.0
+            },
+            {
+              "feature": "w_ma_align",
+              "weight": 450.0
+            },
+            {
+              "feature": "d_ma_align",
+              "weight": 225.0
+            },
+            {
+              "feature": "d_vol_ma5",
+              "weight": 75.0
+            },
+            {
+              "feature": "d_low20_dist",
+              "weight": 225.0
+            },
+            {
+              "feature": "d_high20_dist",
+              "weight": 300.0
+            },
+            {
+              "feature": "dd20",
+              "weight": -300.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "w_ma20_slope",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.3
+            },
+            {
+              "score_min": 5.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 40.0,
+              "weight": 0.7
+            },
+            {
+              "score_min": 300.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "ef38ab93863ae8eb",
+      "status": "SHADOW_EVALUATION",
+      "challenge_type": "prediction",
+      "created_anchor": 68,
+      "forward_oos_start": 69,
+      "account_snapshot": {
+        "cash": 118613.0645545769,
+        "shares": 0.0,
+        "nav": 118613.064555
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@68",
+      "baseline_start_anchor": 69,
+      "baseline_account_snapshot_hash": "35efbd7da466e778",
+      "matured_counts": {
+        "w1": 35,
+        "w8": 28
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.300535,
+        "sharpe": 0.8713,
+        "mdd": -0.135866,
+        "win_rate": 0.2647,
+        "avg_pos": 0.4754
+      },
+      "evaluation_shadow_nav": 130053.461078,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.300535
+      },
+      "_benchmark": {
+        "underperform": true,
+        "ref_sharpe_max": 0.888,
+        "ref_mdd_min": -0.4277,
+        "buy_hold_cum": 0.7891,
+        "momentum_dd_sharpe": 0.5892
+      },
+      "reject_reason": "BENCHMARK_GATE"
+    },
+    {
+      "id": "CH_P018_5",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 50.0
+            },
+            {
+              "feature": "rsi14",
+              "weight": -0.5
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.6
+            }
+          ],
+          "min": 0.0,
+          "max": 0.6
+        }
+      },
+      "spec_hash": "2d0bb40a5721224d",
+      "status": "REJECTED",
+      "challenge_type": "prediction",
+      "created_anchor": 72,
+      "forward_oos_start": 73,
+      "account_snapshot": {
+        "cash": 24747.270070448423,
+        "shares": 47027.42333764704,
+        "nav": 123739.996196
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@72",
+      "baseline_start_anchor": 73,
+      "baseline_account_snapshot_hash": "5ce035db46a93393",
+      "matured_counts": {
+        "w1": 27,
+        "w8": 20
+      },
+      "low_effect": true,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.0,
+        "sharpe": 0.0,
+        "mdd": 0.0,
+        "win_rate": 0.0,
+        "avg_pos": 0.0
+      },
+      "evaluation_shadow_nav": 100000.0,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.0
+      },
+      "reject_reason": "LOW_EFFECT"
+    },
+    {
+      "id": "CH_P020_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 2000.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 1000.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.75
+            }
+          ],
+          "min": 0.0,
+          "max": 0.75
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "89734474f0c35c32",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 80,
+      "forward_oos_start": 81,
+      "account_snapshot": {
+        "cash": 31010.22104058377,
+        "shares": 44621.39170534481,
+        "nav": 155057.689981
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@80",
+      "baseline_start_anchor": 81,
+      "baseline_account_snapshot_hash": "73d0168983f3e68d",
+      "matured_counts": {
+        "w1": 23,
+        "w8": 16
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.284995,
+        "sharpe": 0.7794,
+        "mdd": -0.141496,
+        "win_rate": 0.2625,
+        "avg_pos": 0.3796
+      },
+      "evaluation_shadow_nav": 128499.45087,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.284995
+      }
+    },
+    {
+      "id": "CH_S010_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 2000.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 2000.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "d_dif1",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 5.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "f5ee76576016470b",
+      "status": "EVALUATING",
+      "challenge_type": "strategy",
+      "created_anchor": 80,
+      "forward_oos_start": 81,
+      "account_snapshot": {
+        "cash": 31010.22104058377,
+        "shares": 44621.39170534481,
+        "nav": 155057.689981
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@80",
+      "baseline_start_anchor": 81,
+      "baseline_account_snapshot_hash": "73d0168983f3e68d",
+      "matured_counts": {
+        "w1": 23,
+        "w8": 16
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.092675,
+        "sharpe": 0.3403,
+        "mdd": -0.220009,
+        "win_rate": 0.2125,
+        "avg_pos": 0.3827
+      },
+      "evaluation_shadow_nav": 109267.457898,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.092675
+      }
+    },
+    {
+      "id": "CH_P021_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1000.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "4d448f76b02aeace",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 84,
+      "forward_oos_start": 85,
+      "account_snapshot": {
+        "cash": 142050.95589185966,
+        "shares": 0.0,
+        "nav": 142050.955892
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@84",
+      "baseline_start_anchor": 85,
+      "baseline_account_snapshot_hash": "e7fd251fca1a202f",
+      "matured_counts": {
+        "w1": 19,
+        "w8": 12
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.42051,
+        "sharpe": 0.8873,
+        "mdd": -0.192723,
+        "win_rate": 0.369,
+        "avg_pos": 0.5365
+      },
+      "evaluation_shadow_nav": 142050.955892,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.42051
+      }
+    },
+    {
+      "id": "CH_P022_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1500.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "a4b9e3c4cffa0bf5",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 88,
+      "forward_oos_start": 89,
+      "account_snapshot": {
+        "cash": 27334.916052341374,
+        "shares": 50042.79492179223,
+        "nav": 136678.422956
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@88",
+      "baseline_start_anchor": 89,
+      "baseline_account_snapshot_hash": "327e572da76ad36b",
+      "matured_counts": {
+        "w1": 15,
+        "w8": 8
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.366784,
+        "sharpe": 0.7835,
+        "mdd": -0.192723,
+        "win_rate": 0.3523,
+        "avg_pos": 0.5303
+      },
+      "evaluation_shadow_nav": 136678.422956,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.366784
+      }
+    },
+    {
+      "id": "CH_P022_2",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 62.5
+            },
+            {
+              "feature": "vol_pct",
+              "weight": -12.5
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.75
+            }
+          ],
+          "min": 0.0,
+          "max": 0.75
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "0a9bbdcd708ed605",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 88,
+      "forward_oos_start": 89,
+      "account_snapshot": {
+        "cash": 27334.916052341374,
+        "shares": 50042.79492179223,
+        "nav": 136678.422956
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@88",
+      "baseline_start_anchor": 89,
+      "baseline_account_snapshot_hash": "327e572da76ad36b",
+      "matured_counts": {
+        "w1": 15,
+        "w8": 8
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.015791,
+        "sharpe": 0.0049,
+        "mdd": -0.157509,
+        "win_rate": 0.1023,
+        "avg_pos": 0.1433
+      },
+      "evaluation_shadow_nav": 98420.868706,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.015791
+      }
+    },
+    {
+      "id": "CH_P022_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "dd20",
+              "weight": -125.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.6
+            }
+          ],
+          "min": 0.0,
+          "max": 0.6
+        },
+        "gates": [
+          {
+            "feature": "dd20",
+            "op": ">",
+            "value": -0.05
+          }
+        ]
+      },
+      "spec_hash": "5de8b2cdbd61ee42",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 88,
+      "forward_oos_start": 89,
+      "account_snapshot": {
+        "cash": 27334.916052341374,
+        "shares": 50042.79492179223,
+        "nav": 136678.422956
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@88",
+      "baseline_start_anchor": 89,
+      "baseline_account_snapshot_hash": "327e572da76ad36b",
+      "matured_counts": {
+        "w1": 15,
+        "w8": 8
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.259024,
+        "sharpe": 0.7614,
+        "mdd": -0.152703,
+        "win_rate": 0.3068,
+        "avg_pos": 0.3506
+      },
+      "evaluation_shadow_nav": 125902.353349,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.259024
+      }
+    },
+    {
+      "id": "CH_S011_2",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 1250.0
+            },
+            {
+              "feature": "w_dif1",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.25
+            },
+            {
+              "score_min": 5.0,
+              "weight": 0.5
+            },
+            {
+              "score_min": 10.0,
+              "weight": 1.0
+            }
+          ],
+          "min": 0.0,
+          "max": 1.0
+        }
+      },
+      "spec_hash": "c08f67ffe10d00bf",
+      "status": "EVALUATING",
+      "challenge_type": "strategy",
+      "created_anchor": 88,
+      "forward_oos_start": 89,
+      "account_snapshot": {
+        "cash": 27334.916052341374,
+        "shares": 50042.79492179223,
+        "nav": 136678.422956
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@88",
+      "baseline_start_anchor": 89,
+      "baseline_account_snapshot_hash": "327e572da76ad36b",
+      "matured_counts": {
+        "w1": 15,
+        "w8": 8
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.107284,
+        "sharpe": 0.3482,
+        "mdd": -0.168915,
+        "win_rate": 0.2614,
+        "avg_pos": 0.3202
+      },
+      "evaluation_shadow_nav": 110728.446446,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.107284
+      }
+    },
+    {
+      "id": "CH_P023_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "rsi14",
+              "weight": 12.5
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.7
+            }
+          ],
+          "min": 0.0,
+          "max": 0.7
+        },
+        "gates": [
+          {
+            "feature": "rsi14",
+            "op": ">=",
+            "value": 50.0
+          }
+        ]
+      },
+      "spec_hash": "1112680a4edd40bd",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 92,
+      "forward_oos_start": 93,
+      "account_snapshot": {
+        "cash": 120869.02209724594,
+        "shares": 0.0,
+        "nav": 120869.022097
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@92",
+      "baseline_start_anchor": 93,
+      "baseline_account_snapshot_hash": "a6430c418f1c0639",
+      "matured_counts": {
+        "w1": 11,
+        "w8": 4
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.318184,
+        "sharpe": 0.7457,
+        "mdd": -0.199,
+        "win_rate": 0.3478,
+        "avg_pos": 0.4441
+      },
+      "evaluation_shadow_nav": 131818.437433,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.318184
+      }
+    },
+    {
+      "id": "CH_P023_2",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 50.0
+            },
+            {
+              "feature": "vol_pct",
+              "weight": -10.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.75
+            }
+          ],
+          "min": 0.0,
+          "max": 0.75
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "6e535e282d376b1b",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 92,
+      "forward_oos_start": 93,
+      "account_snapshot": {
+        "cash": 120869.02209724594,
+        "shares": 0.0,
+        "nav": 120869.022097
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@92",
+      "baseline_start_anchor": 93,
+      "baseline_account_snapshot_hash": "a6430c418f1c0639",
+      "matured_counts": {
+        "w1": 11,
+        "w8": 4
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.015791,
+        "sharpe": 0.0048,
+        "mdd": -0.157509,
+        "win_rate": 0.0978,
+        "avg_pos": 0.1371
+      },
+      "evaluation_shadow_nav": 98420.868706,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.015791
+      }
+    },
+    {
+      "id": "CH_P023_3",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "w_dif1",
+              "weight": 3500.0
+            },
+            {
+              "feature": "w_dif2",
+              "weight": 1750.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.75
+            }
+          ],
+          "min": 0.0,
+          "max": 0.75
+        },
+        "gates": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "1a4bb1b0560cc57e",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 92,
+      "forward_oos_start": 93,
+      "account_snapshot": {
+        "cash": 120869.02209724594,
+        "shares": 0.0,
+        "nav": 120869.022097
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@92",
+      "baseline_start_anchor": 93,
+      "baseline_account_snapshot_hash": "a6430c418f1c0639",
+      "matured_counts": {
+        "w1": 11,
+        "w8": 4
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.183867,
+        "sharpe": 0.5159,
+        "mdd": -0.141496,
+        "win_rate": 0.2283,
+        "avg_pos": 0.3306
+      },
+      "evaluation_shadow_nav": 118386.713412,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.183867
+      }
+    },
+    {
+      "id": "CH_P023_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 875.0
+            },
+            {
+              "feature": "vol_ratio",
+              "weight": 3.5
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.6
+            }
+          ],
+          "min": 0.0,
+          "max": 0.6
+        },
+        "gates": [
+          {
+            "feature": "vol_ratio",
+            "op": ">",
+            "value": 1.2
+          },
+          {
+            "feature": "d_dif1",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "1b5c150ba81875e0",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 92,
+      "forward_oos_start": 93,
+      "account_snapshot": {
+        "cash": 120869.02209724594,
+        "shares": 0.0,
+        "nav": 120869.022097
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@92",
+      "baseline_start_anchor": 93,
+      "baseline_account_snapshot_hash": "a6430c418f1c0639",
+      "matured_counts": {
+        "w1": 11,
+        "w8": 4
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -1.1e-05,
+        "sharpe": 0.035,
+        "mdd": -0.059668,
+        "win_rate": 0.0652,
+        "avg_pos": 0.071
+      },
+      "evaluation_shadow_nav": 99998.902067,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -1.1e-05
+      }
+    },
+    {
+      "id": "CH_P024_2",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "d_dif1",
+              "weight": 625.0
+            },
+            {
+              "feature": "vol_ratio",
+              "weight": 2.5
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.6
+            }
+          ],
+          "min": 0.0,
+          "max": 0.6
+        },
+        "gates": [
+          {
+            "feature": "vol_ratio",
+            "op": ">",
+            "value": 1.2
+          },
+          {
+            "feature": "d_dif1",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "bfd4a1b6a103b2f7",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 96,
+      "forward_oos_start": 97,
+      "account_snapshot": {
+        "cash": 120869.02209724594,
+        "shares": 0.0,
+        "nav": 120869.022097
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@96",
+      "baseline_start_anchor": 97,
+      "baseline_account_snapshot_hash": "a6430c418f1c0639",
+      "matured_counts": {
+        "w1": 7,
+        "w8": 0
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.029133,
+        "sharpe": -0.185,
+        "mdd": -0.059668,
+        "win_rate": 0.0625,
+        "avg_pos": 0.0804
+      },
+      "evaluation_shadow_nav": 97086.720833,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.029133
+      }
+    },
+    {
+      "id": "CH_P024_3",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "dd20",
+              "weight": -150.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.6
+            }
+          ],
+          "min": 0.0,
+          "max": 0.6
+        },
+        "gates": [
+          {
+            "feature": "dd20",
+            "op": ">",
+            "value": -0.05
+          }
+        ]
+      },
+      "spec_hash": "27c497cb8657c8a3",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 96,
+      "forward_oos_start": 97,
+      "account_snapshot": {
+        "cash": 120869.02209724594,
+        "shares": 0.0,
+        "nav": 120869.022097
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@96",
+      "baseline_start_anchor": 97,
+      "baseline_account_snapshot_hash": "a6430c418f1c0639",
+      "matured_counts": {
+        "w1": 7,
+        "w8": 0
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.161945,
+        "sharpe": 0.4959,
+        "mdd": -0.152703,
+        "win_rate": 0.2812,
+        "avg_pos": 0.3278
+      },
+      "evaluation_shadow_nav": 116194.457218,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.161945
+      }
+    },
+    {
+      "id": "CH_P024_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 2000.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "bdba4c9c2cbddfdb",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 96,
+      "forward_oos_start": 97,
+      "account_snapshot": {
+        "cash": 120869.02209724594,
+        "shares": 0.0,
+        "nav": 120869.022097
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@96",
+      "baseline_start_anchor": 97,
+      "baseline_account_snapshot_hash": "a6430c418f1c0639",
+      "matured_counts": {
+        "w1": 7,
+        "w8": 0
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.20869,
+        "sharpe": 0.4989,
+        "mdd": -0.22049,
+        "win_rate": 0.3229,
+        "avg_pos": 0.4948
+      },
+      "evaluation_shadow_nav": 120869.022097,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.20869
+      }
+    },
+    {
+      "id": "CH_S012_1",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 105.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.06
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.9
+            }
+          ],
+          "min": 0.0,
+          "max": 0.9
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "spec_hash": "02229d396ce2487a",
+      "status": "EVALUATING",
+      "challenge_type": "strategy",
+      "created_anchor": 96,
+      "forward_oos_start": 97,
+      "account_snapshot": {
+        "cash": 120869.02209724594,
+        "shares": 0.0,
+        "nav": 120869.022097
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@96",
+      "baseline_start_anchor": 97,
+      "baseline_account_snapshot_hash": "a6430c418f1c0639",
+      "matured_counts": {
+        "w1": 7,
+        "w8": 0
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.226368,
+        "sharpe": 0.5687,
+        "mdd": -0.191466,
+        "win_rate": 0.1875,
+        "avg_pos": 0.2923
+      },
+      "evaluation_shadow_nav": 122636.787338,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.226368
+      }
+    },
+    {
+      "id": "CH_P025_3",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "dd20",
+              "weight": -100.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.6
+            }
+          ],
+          "min": 0.0,
+          "max": 0.6
+        },
+        "gates": [
+          {
+            "feature": "dd20",
+            "op": ">",
+            "value": -0.05
+          }
+        ]
+      },
+      "spec_hash": "967850f9628a7cdb",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 100,
+      "forward_oos_start": 101,
+      "account_snapshot": {
+        "cash": 118876.01976509726,
+        "shares": 0.0,
+        "nav": 118876.019765
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@100",
+      "baseline_start_anchor": 101,
+      "baseline_account_snapshot_hash": "a6f5a05763f4ffd5",
+      "matured_counts": {
+        "w1": 3,
+        "w8": 0
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.161945,
+        "sharpe": 0.4859,
+        "mdd": -0.152703,
+        "win_rate": 0.27,
+        "avg_pos": 0.3149
+      },
+      "evaluation_shadow_nav": 116194.457218,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.161945
+      }
+    },
+    {
+      "id": "CH_P026_3",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "rsi14",
+              "weight": 10.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.7
+            }
+          ],
+          "min": 0.0,
+          "max": 0.7
+        },
+        "gates": [
+          {
+            "feature": "rsi14",
+            "op": ">=",
+            "value": 50.0
+          }
+        ]
+      },
+      "spec_hash": "f6b3fb093095daa6",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 104,
+      "forward_oos_start": 105,
+      "account_snapshot": {
+        "cash": 25835.597413638992,
+        "shares": 50759.216720807366,
+        "nav": 129181.362657
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@104",
+      "baseline_start_anchor": 105,
+      "baseline_account_snapshot_hash": "75ee096e32ceb85e",
+      "matured_counts": {
+        "w1": 0,
+        "w8": 0
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": 0.418404,
+        "sharpe": 0.8357,
+        "mdd": -0.19956,
+        "win_rate": 0.3269,
+        "avg_pos": 0.42
+      },
+      "evaluation_shadow_nav": 141840.424953,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": 0.418404
+      }
+    },
+    {
+      "id": "CH_P026_4",
+      "spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 75.0
+            },
+            {
+              "feature": "vol_pct",
+              "weight": -15.0
+            }
+          ]
+        },
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.75
+            }
+          ],
+          "min": 0.0,
+          "max": 0.75
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      },
+      "spec_hash": "49bbb77659b77c4b",
+      "status": "EVALUATING",
+      "challenge_type": "prediction",
+      "created_anchor": 104,
+      "forward_oos_start": 105,
+      "account_snapshot": {
+        "cash": 25835.597413638992,
+        "shares": 50759.216720807366,
+        "nav": 129181.362657
+      },
+      "parent_champion_id": "CH_S064_1",
+      "parent_champion_spec_hash": "a89ae70c5d0f4973",
+      "parent_spec": {
+        "score": {
+          "terms": [
+            {
+              "feature": "mom20",
+              "weight": 1250.0
+            }
+          ]
+        },
+        "gates": [
+          {
+            "feature": "mom20",
+            "op": ">",
+            "value": 0.0
+          }
+        ],
+        "position": {
+          "type": "step",
+          "levels": [
+            {
+              "score_min": 0.0,
+              "weight": 0.8
+            }
+          ],
+          "min": 0.0,
+          "max": 0.8
+        },
+        "drawdown_control": {
+          "window_weeks": 8,
+          "threshold": 0.1,
+          "factor": 0.5
+        }
+      },
+      "baseline_branch_id": "baseline_CH_S064_1@104",
+      "baseline_start_anchor": 105,
+      "baseline_account_snapshot_hash": "75ee096e32ceb85e",
+      "matured_counts": {
+        "w1": 0,
+        "w8": 0
+      },
+      "low_effect": false,
+      "context_scope": "sanitized_only",
+      "non_decisional": false,
+      "long_horizon": {
+        "cum": -0.045784,
+        "sharpe": -0.1092,
+        "mdd": -0.157509,
+        "win_rate": 0.0865,
+        "avg_pos": 0.1357
+      },
+      "evaluation_shadow_nav": 95421.606125,
+      "in_sample_replay": {
+        "non_decisional_in_sample": true,
+        "cumulative_return": -0.045784
+      }
+    }
+  ],
+  "promotion_history": [],
+  "next_challenge_due": {
+    "prediction": null,
+    "strategy": null
+  },
+  "promotion_policy_version": "promotion-v2.0.0",
+  "ca_events_hash": "abbf82ad042a14d182450100597c7d05b53ad8f12a5ef03e6e7a026ea2b4e846",
+  "pending_ai_reviews": [],
+  "auto_approve": false,
+  "diagnostic_ok": true,
+  "paused_stage": null
+}

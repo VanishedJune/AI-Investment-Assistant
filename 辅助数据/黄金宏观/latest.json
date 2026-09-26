@@ -1,0 +1,33 @@
+{
+  "schema_version": "gold-macro-v1",
+  "instrument_scope": [
+    "517520"
+  ],
+  "generated_at": "2026-09-18T18:40:10+08:00",
+  "data_as_of": "2026-09-17",
+  "requested_as_of": "2026-09-18",
+  "history_start": "2021-01-04",
+  "row_count": 1428,
+  "data_status": "official_closed_observations",
+  "same_date_cn_session_allowed": false,
+  "availability_note": "美国日期为来源观测日；若该值在中国市场收盘后发布，不得用于同日A股盘中或收盘决策，只能用于发布后进行的分析。",
+  "tips_10y": {
+    "value_pct": 2.61,
+    "change_1_observation_pct_point": -0.07,
+    "change_5_observations_pct_point": 0.06,
+    "change_20_observations_pct_point": 0.26,
+    "gold_relation": "通常反向；上升构成压力，下降构成支持"
+  },
+  "inflation_compensation_10y": {
+    "value_pct": 2.33,
+    "nominal_yield_10y_pct": 4.94,
+    "change_1_observation_pct_point": 0.0,
+    "change_5_observations_pct_point": -0.07,
+    "change_20_observations_pct_point": 0.03,
+    "interpretation_note": "这是市场隐含通胀补偿，不等同于CPI预测；必须与实际利率和名义利率联合解释。"
+  },
+  "sources": {
+    "real_yield": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_real_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+    "nominal_yield": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv"
+  }
+}

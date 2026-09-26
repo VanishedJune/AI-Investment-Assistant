@@ -1,0 +1,33 @@
+{
+  "source_calendar": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+  "checked_through": "2026-09-11",
+  "verified_at": "2026-09-12T07:30:24.011590+00:00",
+  "statements": [
+    {
+      "meeting_date": "2026-01-28",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a.htm",
+      "decision_quote": "In support of its goals, the Committee decided to maintain the target range for the federal funds rate at 3‑1/2 to 3‑3/4 percent. In considering the extent and timing of additional adjustments to the target range for the federal funds rate, the Committee will carefully assess incoming data, the evolving outlook, and the balance of risks. The Committee is strongly committed to supporting maximum employment and returning inflation to its 2 percent objective."
+    },
+    {
+      "meeting_date": "2026-03-18",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm",
+      "decision_quote": "In support of its goals, the Committee decided to maintain the target range for the federal funds rate at 3‑1/2 to 3‑3/4 percent. In considering the extent and timing of additional adjustments to the target range for the federal funds rate, the Committee will carefully assess incoming data, the evolving outlook, and the balance of risks. The Committee is strongly committed to supporting maximum employment and returning inflation to its 2 percent objective."
+    },
+    {
+      "meeting_date": "2026-04-29",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm",
+      "decision_quote": "In support of its goals, the Committee decided to maintain the target range for the federal funds rate at 3‑1/2 to 3‑3/4 percent. In considering the extent and timing of additional adjustments to the target range for the federal funds rate, the Committee will carefully assess incoming data, the evolving outlook, and the balance of risks. The Committee is strongly committed to supporting maximum employment and returning inflation to its 2 percent objective."
+    },
+    {
+      "meeting_date": "2026-06-17",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+      "decision_quote": "The Committee decided to maintain the target range for the federal funds rate at 3-1/2 to 3-3/4 percent, in support of the Federal Reserve's dual mandate. The Committee reaffirmed its policy of maintaining ample reserves in the banking system."
+    },
+    {
+      "meeting_date": "2026-07-29",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+      "decision_quote": "The Committee decided to maintain the target range for the federal funds rate at 3-1/2 to 3-3/4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system."
+    }
+  ],
+  "scope": "官方当年已公布声明；不把未来会议安排写成已发生决议"
+}

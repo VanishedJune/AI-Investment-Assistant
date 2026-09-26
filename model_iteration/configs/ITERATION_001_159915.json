@@ -1,0 +1,40 @@
+{
+  "iteration_id": "ITERATION_001_159915",
+  "etf": "159915",
+  "window_policy": "full_history",
+  "dev_fraction": 0.75,
+  "min_validation_weeks": 104,
+  "embargo_weeks": 8,
+  "horizon_weeks": 8,
+  "roundtrip_cost_bps": 10,
+  "ridge_alpha": 10.0,
+  "min_train_samples": 40,
+  "challengers": ["CH_A", "CH_B"],
+  "gates": {
+    "cum_tolerance": 0.05,
+    "sharpe_tolerance": 0.05,
+    "dd_tolerance": 0.03,
+    "win_rate_tolerance": 0.02,
+    "median_tolerance": 0.001,
+    "participation_tolerance": 0.05,
+    "passive_tolerance": 0.02,
+    "mae_multiple": 1.05,
+    "brier_multiple": 1.05,
+    "min_path_difference": 0.05
+  },
+  "diagnosis": {
+    "problem": "规则长期参与不足：159915 全历史 711 周仅 31.1% 周在场，空仓错过上涨合计 +864.87%，最近 165 周切片也只 26.7% 在场，错失大量修复行情。",
+    "evidence": [
+      "全历史 Champion（周>0 且 日>0 → 100%）：累计 +101.89%、Sharpe 0.375、最大回撤 −33.11%、持有率 31.1%；买入持有 +344.96%。",
+      "空仓期间上涨合计 +864.87%；持仓期间下跌合计 −270.49%。",
+      "最近 165 周：规则 +4.98%、Sharpe 0.179、持有率 26.7%；买入持有 +49.80%。",
+      "日周状态统计显示“日强周弱/周强日弱”混合状态的平均未来一周收益为正，简单双正规则未利用这些状态。"
+    ],
+    "hypothesis": "主要错误类型为 ACTIVITY_ERROR（参与不足/机会成本），其次为 MULTI_TIMEFRAME_ERROR（日强周弱恢复状态未被利用）；0/100 双值仓位可能放大择时损耗（潜在 STRATEGY_ERROR）。",
+    "changes": [
+      "CH_A：在双正 100% 之外，新增“日强周弱恢复状态”（周斜率<0 且 日斜率>0 且 日DIF1>0、DIF2≥0）50% 试探仓位。",
+      "CH_B：numpy 闭式 Ridge（alpha=10）以 PIT 特征预测未来 8 周收益，预测>0 则 100%，否则现金；验证期 expanding-window 训练。"
+    ]
+  },
+  "next_step": "读取门禁结果后由 Agent 决定：通过则进入 SHADOW_EVALUATION 并规划下一轮（如平滑仓位或 Kernel Ridge）；未通过则按验证期错误模式调整本轮假设，最多再跑 1 轮后停止并归档。"
+}

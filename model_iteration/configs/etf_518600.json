@@ -1,0 +1,53 @@
+{
+  "etf": "518600",
+  "name": "广发黄金ETF",
+  "workspace": "etf_518600",
+  "coverage": {
+    "start": "2020-08-05",
+    "end": "2026-08-28"
+  },
+  "expected_anchors": 272,
+  "horizon": 8,
+  "cost_bps": 10,
+  "champion": {
+    "id": "CH_S064_1",
+    "spec": {
+      "score": {
+        "terms": [
+          {
+            "feature": "mom20",
+            "weight": 1250.0
+          }
+        ]
+      },
+      "gates": [
+        {
+          "feature": "mom20",
+          "op": ">",
+          "value": 0.0
+        }
+      ],
+      "position": {
+        "type": "step",
+        "levels": [
+          {
+            "score_min": 0.0,
+            "weight": 0.8
+          }
+        ],
+        "min": 0.0,
+        "max": 0.8
+      },
+      "drawdown_control": {
+        "window_weeks": 8,
+        "threshold": 0.1,
+        "factor": 0.5
+      }
+    }
+  },
+  "promotion_policy_version": "promotion-v2.0.0",
+  "execution_policy": {
+    "mode": "b0207_cycle",
+    "decision_cycle_weeks": 4
+  }
+}

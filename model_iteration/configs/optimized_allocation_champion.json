@@ -1,0 +1,41 @@
+{
+  "schema_version": "allocation-research-evidence-v1",
+  "champion_id": "B0207",
+  "role": "research_evidence_only",
+  "runtime_authority": false,
+  "production_config": "configs/investment_priority.json",
+  "research_source": {
+    "order": [
+      "159915",
+      "518600",
+      "516150",
+      "159622",
+      "159941",
+      "512010",
+      "512800",
+      "512690"
+    ],
+    "params": {
+      "core_budget": 85,
+      "remainder_budget": 15,
+      "floor": 0.0,
+      "ladder": 0,
+      "max_single": 100,
+      "rebalance": 4,
+      "core_size": 3,
+      "weekly_deploy": true
+    }
+  },
+  "evidence": {
+    "source_script": "scripts/compare_b0207_weekly_deploy.py",
+    "artifact": "../champion_vs_dca/allocation_optimization_b0207_weekly_deploy.json",
+    "weekly_guard": {
+      "trigger": "d_dif1<0 and d_dif2<0 and w_dif1<0 and w_dif2<0 and mom20<-0.05",
+      "sell_frac": 0.7,
+      "per_episode": true,
+      "reset_on_recovery": true,
+      "note": "周度强看空保护：四导全负且mom20<-5%时卖出该ETF 70%（5年218.4%/MDD-11.2%）"
+    },
+    "note": "该文件只保存B0207的研究来源和回测证据；生产顺序、预算、步长和周期只能读取investment_priority.json。"
+  }
+}

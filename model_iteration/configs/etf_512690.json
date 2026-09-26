@@ -1,0 +1,60 @@
+{
+  "etf": "512690",
+  "name": "鹏华酒ETF",
+  "workspace": "etf_512690",
+  "coverage": {
+    "start": "2019-05-06",
+    "end": "2026-08-28"
+  },
+  "expected_anchors": 336,
+  "horizon": 8,
+  "cost_bps": 10,
+  "champion": {
+    "id": "CH_S032_2",
+    "spec": {
+      "score": {
+        "terms": [
+          {
+            "feature": "w_dif1",
+            "weight": 1750.0
+          }
+        ]
+      },
+      "gates": [
+        {
+          "feature": "w_dif1",
+          "op": ">",
+          "value": 0.0
+        }
+      ],
+      "position": {
+        "type": "step",
+        "levels": [
+          {
+            "score_min": 0.0,
+            "weight": 1.0
+          }
+        ],
+        "min": 0.0,
+        "max": 1.0
+      },
+      "ramp": {
+        "confirm_after_weeks": 2,
+        "initial_weight": 0.5,
+        "full_weight": 1.0,
+        "confirm_gate": [
+          {
+            "feature": "w_dif1",
+            "op": ">",
+            "value": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "promotion_policy_version": "promotion-v2.0.0",
+  "execution_policy": {
+    "mode": "b0207_cycle",
+    "decision_cycle_weeks": 4
+  }
+}

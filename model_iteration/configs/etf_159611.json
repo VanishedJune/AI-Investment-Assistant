@@ -1,0 +1,114 @@
+{
+  "etf": "159611",
+  "name": "电力ETF广发",
+  "workspace": "etf_159611",
+  "data_provenance": "model_iteration/etf_159611/data_provenance.json",
+  "champion_lineage": "model_iteration/etf_159611/champion_lineage.json",
+  "coverage": {
+    "start": "2022-01-07",
+    "end": "2026-09-18"
+  },
+  "expected_anchors": 201,
+  "horizon": 8,
+  "cost_bps": 10,
+  "integrity_mode": "not_evaluated",
+  "initial_champion_provenance": {
+    "source_code": "159941",
+    "source_name": "纳指ETF广发",
+    "source_champion_id": "CH_S064_1",
+    "source_config": "model_iteration/configs/etf_159941.json",
+    "source_state": "model_iteration/etf_159941/weekly_rolling/state.json",
+    "copied_on": "2026-09-19",
+    "scope": "model_structure_parameters_and_rules_only",
+    "excluded": [
+      "159941_returns",
+      "159941_positions",
+      "159941_trades",
+      "159941_evaluation_results"
+    ]
+  },
+  "lifecycle_dates": {
+    "source_model_parameter_training_cutoff": "2026-08-28",
+    "selection_replay_data_start": "2022-10-21",
+    "selection_replay_data_end": "2026-09-18",
+    "temporal_holdout_audit_start": "2026-03-20",
+    "temporal_holdout_audit_end": "2026-09-11",
+    "current_market_data_cutoff": "2026-09-18",
+    "champion_confirmed_at": "2026-09-19T12:13:19+09:00"
+  },
+  "runtime_policy": {
+    "daily_analysis": "frozen_champion_inference_only",
+    "training_trigger": "explicit_user_request_only",
+    "replay_trigger": "explicit_user_request_only",
+    "date_mismatch_invalidates_champion": false,
+    "stale_derived_files_block_current_inference": false
+  },
+  "iteration_outcome": {
+    "usable_anchors": 201,
+    "frozen_proposals": 75,
+    "registered_rounds": 52,
+    "challengers": 80,
+    "promotions": 0,
+    "final_champion_id": "CH_S064_1",
+    "result": "initial_champion_retained_under_existing_rules"
+  },
+  "full_cycle_iteration": {
+    "status": "completed",
+    "iteration_record": "model_iteration/etf_159611/iterations/ITERATION_001_159611.json",
+    "usable_anchors": 201,
+    "latest_anchor_index": 200,
+    "final_champion_id": "CH_S064_1"
+  },
+  "slot_activation": {
+    "status": "active",
+    "activated_on": "2026-09-19",
+    "slot_index": 5,
+    "acceptance_basis": "existing_iteration_completed_and_initial_champion_retained_without_forced_promotion",
+    "performance_note": "The retained champion reduced full-period and holdout drawdown versus buy-and-hold but underperformed its return and Sharpe; this is not claimed as optimization success."
+  },
+  "champion": {
+    "id": "CH_S064_1",
+    "spec": {
+      "score": {
+        "terms": [
+          {
+            "feature": "mom20",
+            "weight": 1250.0
+          }
+        ]
+      },
+      "gates": [
+        {
+          "feature": "mom20",
+          "op": ">",
+          "value": 0.0
+        }
+      ],
+      "position": {
+        "type": "step",
+        "levels": [
+          {
+            "score_min": 0.0,
+            "weight": 0.8
+          }
+        ],
+        "min": 0.0,
+        "max": 0.8
+      },
+      "drawdown_control": {
+        "window_weeks": 8,
+        "threshold": 0.1,
+        "factor": 0.5
+      }
+    }
+  },
+  "promotion_policy_version": "promotion-v2.0.0",
+  "promotion_policy": {
+    "benchmark_hard_gate": true,
+    "rebase_min_sharpe": 0.7
+  },
+  "execution_policy": {
+    "mode": "b0207_cycle",
+    "decision_cycle_weeks": 4
+  }
+}

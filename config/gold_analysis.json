@@ -1,0 +1,125 @@
+{
+  "schema_version": "gold-analysis-v2-gold-equities",
+  "instrument": {
+    "code": "517520",
+    "name": "黄金股ETF永赢"
+  },
+  "scope_rule": "本配置只用于517520黄金ETF的Agent增量分析，不作用于其他ETF，不修改冠军模型或B0207机械基线。",
+  "quantitative_macro": [
+    {
+      "id": "us_10y_tips_real_yield",
+      "required_local_file": "辅助数据/黄金宏观/美国10年TIPS实际收益率.csv",
+      "primary": true,
+      "comparison_windows_observations": [
+        1,
+        5,
+        20
+      ],
+      "usual_gold_relation": "inverse",
+      "rule": "必须报告当前值及1、5、20个共同观测的变化；上升通常压制黄金，下降通常支持黄金，不得只凭单日变化下结论。"
+    },
+    {
+      "id": "us_10y_inflation_compensation",
+      "required_local_file": "辅助数据/黄金宏观/美国10年市场隐含通胀.csv",
+      "primary": false,
+      "comparison_windows_observations": [
+        1,
+        5,
+        20
+      ],
+      "rule": "必须与名义10年期收益率、10年TIPS联合解释；不得称为确定的未来CPI。"
+    }
+  ],
+  "historical_event_studies": [
+    {
+      "id": "fomc_15_calendar_day_windows",
+      "decision_file": "辅助数据/黄金宏观/美联储政策决议.csv",
+      "window_file": "辅助数据/黄金宏观/黄金股ETF517520_FOMC事件窗口.csv",
+      "summary_file": "辅助数据/黄金宏观/黄金股ETF517520_FOMC事件窗口汇总.json",
+      "price_field": "adj_close",
+      "window_calendar_days": 15,
+      "base_rule": "FOMC声明前最后一个A股有效收盘",
+      "availability_rule": "美国声明后的首个A股交易日",
+      "non_trading_day_rule": "使用距离前后15日目标最近的有效A股交易日",
+      "rule": "黄金Agent必须按加息、降息和维持分别读取历史窗口，同时披露样本数与正负次数；历史均值只作情景证据，不得当作因果关系、确定预测或独立交易信号。"
+    }
+  ],
+  "event_watchlists": [
+    {
+      "id": "gold_2026_sep_nov_event_watchlist",
+      "required_local_file": "辅助数据/黄金宏观/黄金事件观察清单_2026-09至11月.json",
+      "human_readable_file": "辅助数据/黄金宏观/黄金事件观察清单_2026-09至11月.md",
+      "scope": "2026-09-04、2026-09-11、2026-09-15/16及2026年11月选举与流动性观察窗口",
+      "rule": "事件发生前只列风险情景；事件发生后必须核对官方实际值、市场预期和跨市场反应。截图观点不得作为原始证据、确定预测或独立交易信号。"
+    }
+  ],
+  "context_evidence": [
+    {
+      "id": "fomc_policy_and_calendar",
+      "type": "event_and_policy_context",
+      "required_fields": [
+        "source_date",
+        "meeting_date",
+        "observed_fact",
+        "source_url"
+      ],
+      "rule": "区分已公布政策、官员表态和市场概率；概率必须带来源与时间戳，无法核实时写未取得。"
+    },
+    {
+      "id": "central_bank_gold_demand",
+      "type": "structural_demand_context",
+      "required_fields": [
+        "report_period",
+        "actual_or_survey",
+        "observed_fact",
+        "source_url"
+      ],
+      "rule": "实际购金吨数与调查意愿分开；调查不得冒充实际购金，主要用于中长期背景而非周度择时。"
+    },
+    {
+      "id": "dollar_and_usdcny",
+      "type": "translation_and_price_context",
+      "required_fields": [
+        "data_as_of",
+        "dollar_measure",
+        "usdcny",
+        "source_url"
+      ],
+      "rule": "美元影响国际金价，USD/CNY影响人民币计价结果；二者缺失时不得根据印象判断。"
+    },
+    {
+      "id": "international_gold_and_session_gap",
+      "type": "cross_market_context",
+      "required_fields": [
+        "data_as_of",
+        "instrument",
+        "close",
+        "session_relation",
+        "source_url"
+      ],
+      "rule": "海外价格发生在A股收盘后时，只作为下一交易日跳空风险，不得改写517520当日已完成走势。"
+    }
+  ],
+  "decision_rule": "宏观与事件证据只补充517520的周K主导、日K辅助分析；FOMC历史窗口必须与当前政策动作匹配并披露小样本限制，不得单独产生交易，不得改写B0207方向和机械权重。所有来源日期晚于分析截止日的证据一律排除。",
+  "missing_data_rule": "任何未取得或未核实的指标必须明确标记unavailable，不得估算、补写或引用无来源数字。",
+  "legacy_event_studies": [
+    {
+      "instrument": "518600",
+      "role": "physical_gold_historical_context_only",
+      "window_file": "辅助数据/黄金宏观/黄金ETF_FOMC事件窗口.csv",
+      "summary_file": "辅助数据/黄金宏观/黄金ETF_FOMC事件窗口汇总.json"
+    }
+  ],
+  "asset_distinction": {
+    "asset_class": "gold_industry_equities",
+    "not_physical_gold": true,
+    "required_additional_evidence": [
+      "黄金矿企利润与估值",
+      "开采成本、产量及经营风险",
+      "沪深港股风险偏好与交易日错位",
+      "持仓集中度、跟踪误差及折溢价"
+    ],
+    "missing_rule": "逐项检查，缺失写unavailable；不以国际黄金支撑位替代517520自身支撑，不继承518600事件收益和看多结论",
+    "historical_rule": "2023年加息4次均早于517520成立，517520自身对应收益不可得，不得拼接518600数据"
+  }
+}

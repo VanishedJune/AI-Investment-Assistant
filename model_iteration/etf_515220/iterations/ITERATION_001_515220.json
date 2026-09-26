@@ -1,0 +1,82 @@
+{
+  "schema_version": "iteration-record-v1.0.0",
+  "etf": "515220",
+  "name": "煤炭ETF国泰",
+  "generated_at": "2026-08-29T16:18:25+09:00",
+  "rule_version": "B0207-v3.0.0",
+  "execution_policy": {
+    "mode": "b0207_cycle",
+    "decision_cycle_weeks": 4,
+    "signal_smooth_days": 5,
+    "non_decision_graded": {
+      "enabled": true,
+      "feature": "d_dif1",
+      "add_cash_frac": 0.5,
+      "sell_holdings_frac": 0.5
+    },
+    "bearish_guard": {
+      "enabled": true,
+      "sell_frac": 0.7,
+      "per_episode": true,
+      "reset_on_recovery": true,
+      "conditions": [
+        {
+          "feature": "d_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "d_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "mom20",
+          "op": "<",
+          "value": -0.05
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "start": "2020-03-02",
+    "end": "2026-08-28"
+  },
+  "usable_anchors": 294,
+  "latest_anchor_index": 293,
+  "resume_from": 294,
+  "pending_ai_reviews": 0,
+  "initial_champion": "CH_S064_1",
+  "final_champion": "CH_S064_1",
+  "promotion_chain": [
+    "CH_S064_1"
+  ],
+  "promotions": 0,
+  "proposals_frozen": 109,
+  "rounds_registered": 74,
+  "diagnostics": 109,
+  "challengers_total": 141,
+  "challenger_status": {
+    "REJECTED": 97,
+    "SHADOW_EVALUATION": 27,
+    "EVALUATING": 17
+  },
+  "events_total": 61518,
+  "events_by_type": {
+    "forecast": 12410,
+    "evaluation": 48962,
+    "proposal_orchestrated": 74,
+    "promotion_checkpoint": 72
+  },
+  "workspace": "D:\\Research\\Codex\\projects\\investment\\AI-Investment-Assistant\\model_iteration\\etf_515220"
+}

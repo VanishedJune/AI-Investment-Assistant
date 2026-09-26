@@ -1,0 +1,189 @@
+{
+  "schema_version": "2.0.0",
+  "verified_on": "2026-09-19",
+  "instruments": [
+    {
+      "code": "159915",
+      "name": "创业板ETF易方达",
+      "exchange": "SZSE",
+      "symbol": "sz159915",
+      "inception_date": "2011-09-20",
+      "sector": "A股成长",
+      "risk_cluster": "成长权益",
+      "price_tick": 0.001,
+      "price_limit_pct": 20,
+      "qdii": false,
+      "benchmark": {
+        "code": "399006",
+        "name": "创业板指数",
+        "provider_symbol": "sz399006",
+        "currency": "CNY",
+        "timezone": "Asia/Shanghai",
+        "lag_sessions": 0,
+        "fx_symbol": null
+      },
+      "official_source": "https://www.efunds.com.cn/"
+    },
+    {
+      "code": "517520",
+      "name": "黄金股ETF永赢",
+      "exchange": "SSE",
+      "symbol": "sh517520",
+      "inception_date": "2023-10-24",
+      "sector": "沪深港黄金产业股票",
+      "risk_cluster": "黄金产业权益",
+      "price_tick": 0.001,
+      "price_limit_pct": 10,
+      "qdii": false,
+      "benchmark": {
+        "code": null,
+        "name": "中证沪深港黄金产业股票指数",
+        "provider_symbol": null,
+        "currency": "CNY",
+        "timezone": "Asia/Shanghai",
+        "lag_sessions": 0,
+        "fx_symbol": null,
+        "mapping_status": "numeric_code_unverified"
+      },
+      "official_source": "https://www.maxwealthfund.com/",
+      "identity_evidence": "https://fundf10.eastmoney.com/jbgk_517520.html",
+      "identity_note": "身份及指数名称已核对公开基金资料；指数代码及官方产品直达页待核实，不沿用上海金映射",
+      "hong_kong_stock_connect": true
+    },
+    {
+      "code": "516150",
+      "name": "稀土ETF嘉实",
+      "exchange": "SSE",
+      "symbol": "sh516150",
+      "inception_date": "2021-03-17",
+      "sector": "资源",
+      "risk_cluster": "周期资源",
+      "price_tick": 0.001,
+      "price_limit_pct": 10,
+      "qdii": false,
+      "benchmark": {
+        "code": "930598",
+        "name": "中证稀土产业指数",
+        "provider_symbol": "csi930598",
+        "currency": "CNY",
+        "timezone": "Asia/Shanghai",
+        "lag_sessions": 0,
+        "fx_symbol": null
+      },
+      "official_source": "https://www.jsfund.cn/"
+    },
+    {
+      "code": "159622",
+      "name": "创新药ETF东财",
+      "exchange": "SZSE",
+      "symbol": "sz159622",
+      "inception_date": "2023-05-09",
+      "sector": "医药",
+      "risk_cluster": "医药创新",
+      "price_tick": 0.001,
+      "price_limit_pct": 20,
+      "qdii": false,
+      "benchmark": {
+        "code": "931409",
+        "name": "中证沪港深创新药产业指数",
+        "provider_symbol": "csi931409",
+        "currency": "CNY",
+        "timezone": "Asia/Shanghai",
+        "lag_sessions": 0,
+        "fx_symbol": null
+      },
+      "official_source": "https://www.dfcfund.com/"
+    },
+    {
+      "code": "159611",
+      "name": "电力ETF广发",
+      "exchange": "SZSE",
+      "symbol": "sz159611",
+      "inception_date": "2021-12-29",
+      "sector": "电力公用事业",
+      "risk_cluster": "防御公用事业",
+      "price_tick": 0.001,
+      "price_limit_pct": 10,
+      "qdii": false,
+      "benchmark": {
+        "code": null,
+        "name": "中证全指电力公用事业指数",
+        "provider_symbol": null,
+        "currency": "CNY",
+        "timezone": "Asia/Shanghai",
+        "lag_sessions": 0,
+        "fx_symbol": null,
+        "mapping_status": "numeric_code_unverified"
+      },
+      "official_source": "https://www.gffunds.com.cn/funds/?fundcode=159611",
+      "identity_evidence": "https://fundf10.eastmoney.com/jbgk_159611.html",
+      "identity_note": "证券身份、成立日和跟踪指数名称已核对公开基金资料；指数数值代码未核实，不作猜测"
+    },
+    {
+      "code": "515220",
+      "name": "煤炭ETF国泰",
+      "exchange": "SSE",
+      "symbol": "sh515220",
+      "inception_date": "2020-03-02",
+      "sector": "煤炭",
+      "risk_cluster": "周期资源",
+      "price_tick": 0.001,
+      "price_limit_pct": 10,
+      "qdii": false,
+      "benchmark": {
+        "code": "399998",
+        "name": "中证煤炭指数",
+        "provider_symbol": "sz399998",
+        "currency": "CNY",
+        "timezone": "Asia/Shanghai",
+        "lag_sessions": 0,
+        "fx_symbol": null
+      },
+      "official_source": "https://www.gtfund.com/"
+    },
+    {
+      "code": "512800",
+      "name": "华宝银行ETF",
+      "exchange": "SSE",
+      "symbol": "sh512800",
+      "inception_date": "2017-08-03",
+      "sector": "银行",
+      "risk_cluster": "金融价值",
+      "price_tick": 0.001,
+      "price_limit_pct": 10,
+      "qdii": false,
+      "benchmark": {
+        "code": "399986",
+        "name": "中证银行指数",
+        "provider_symbol": "sz399986",
+        "currency": "CNY",
+        "timezone": "Asia/Shanghai",
+        "lag_sessions": 0,
+        "fx_symbol": null
+      },
+      "official_source": "https://www.fsfund.com/"
+    },
+    {
+      "code": "512690",
+      "name": "鹏华酒ETF",
+      "exchange": "SSE",
+      "symbol": "sh512690",
+      "inception_date": "2019-05-06",
+      "sector": "消费",
+      "risk_cluster": "消费权益",
+      "price_tick": 0.001,
+      "price_limit_pct": 10,
+      "qdii": false,
+      "benchmark": {
+        "code": "399987",
+        "name": "中证酒指数",
+        "provider_symbol": "sz399987",
+        "currency": "CNY",
+        "timezone": "Asia/Shanghai",
+        "lag_sessions": 0,
+        "fx_symbol": null
+      },
+      "official_source": "https://www.phfund.com.cn/"
+    }
+  ]
+}

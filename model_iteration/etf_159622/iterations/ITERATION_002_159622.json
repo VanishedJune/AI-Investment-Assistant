@@ -1,0 +1,52 @@
+{
+  "ITERATION_ID": "ITERATION_002_159622",
+  "etf": "159622",
+  "name": "创新药ETF东财",
+  "generated_at": "2026-08-08T23:20:00+09:00",
+  "engine": "rolling promotion-v2.0.0",
+  "coverage": {"start": "2023-05-12", "end": "2026-08-07"},
+  "anchors_usable": 128,
+  "horizon_weeks": 8,
+  "cost_bps": 10,
+  "initial_champion": {
+    "id": "CH_S064_1",
+    "model_name": "CH_S064_1_159622",
+    "rule": "mom20>0 -> 80% + 8周回撤>10% -> 40%",
+    "spec_hash": "a89ae70c5d0f4973",
+    "effective_anchor": 0
+  },
+  "final_champion": {
+    "id": "CH_S064_1",
+    "model_name": "CH_S064_1_159622",
+    "spec_hash": "a89ae70c5d0f4973",
+    "effective_anchor": 0
+  },
+  "promotion_history": [],
+  "challenger_counts": {
+    "total": 181,
+    "STALE_SHADOW": 0,
+    "REJECTED": 29,
+    "SHADOW_EVALUATION": 114,
+    "EVALUATING": 38,
+    "PROMOTED": 0
+  },
+  "event_counts": {
+    "total": 51823,
+    "forecast": 10808,
+    "evaluation": 40939,
+    "proposal_orchestrated": 46,
+    "promotion_checkpoint": 30,
+    "ai_review": 0,
+    "challenger_rebased": 0
+  },
+  "proposals_frozen": 46,
+  "proposals_registered": 46,
+  "ledger_hash": "1550152e5019d805856a8891433bd0e170ffe3dc283da4745318bd9f5ddc0070",
+  "pending_ai_reviews": 0,
+  "notes": [
+    "全周期从 anchor 0 重新开始：初始 Champion 为 CH_S064_1（mom20>0 → 80% 仓位，8 周回撤 >10% 减半），最终输出名称统一为 CH_S064_1_159622。",
+    "冠军模型按用户要求改回 CH_S064_1_159622；旧零轴双正 CH_S050_3 替代运行已归档至 backup/etf_159622_alt_CH_S050_3_20260808_223220。",
+    "46 个 Due 轮次全部成功注册挑战者（0 轮无候选通过 screening）。",
+    "全周期无候选通过 promotion-v2.0.0 机器门禁与同现金流基准硬门槛，最终 Champion 保持 CH_S064_1_159622，无晋升/无 AI 复核。"
+  ]
+}

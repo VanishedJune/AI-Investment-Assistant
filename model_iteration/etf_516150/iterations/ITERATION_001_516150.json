@@ -1,0 +1,88 @@
+{
+  "schema_version": "iteration-record-v1.0.0",
+  "etf": "516150",
+  "name": "稀土ETF嘉实",
+  "generated_at": "2026-08-29T15:59:28+09:00",
+  "rule_version": "B0207-v3.0.0",
+  "execution_policy": {
+    "mode": "b0207_cycle",
+    "decision_cycle_weeks": 4,
+    "signal_smooth_days": 5,
+    "non_decision_graded": {
+      "enabled": true,
+      "feature": "d_dif1",
+      "add_cash_frac": 0.5,
+      "sell_holdings_frac": 0.5
+    },
+    "bearish_guard": {
+      "enabled": true,
+      "sell_frac": 0.7,
+      "per_episode": true,
+      "reset_on_recovery": true,
+      "conditions": [
+        {
+          "feature": "d_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "d_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "mom20",
+          "op": "<",
+          "value": -0.05
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "start": "2021-03-17",
+    "end": "2026-08-28"
+  },
+  "usable_anchors": 240,
+  "latest_anchor_index": 239,
+  "resume_from": 240,
+  "pending_ai_reviews": 0,
+  "initial_champion": "CH_S024_3",
+  "final_champion": "CH_S010_3",
+  "promotion_chain": [
+    "CH_S024_3",
+    "CH_S001_2",
+    "CH_S006_2",
+    "CH_S010_3"
+  ],
+  "promotions": 3,
+  "proposals_frozen": 88,
+  "rounds_registered": 72,
+  "diagnostics": 88,
+  "challengers_total": 168,
+  "challenger_status": {
+    "STALE_SHADOW": 106,
+    "PROMOTED": 1,
+    "REJECTED": 27,
+    "SHADOW_EVALUATION": 27,
+    "EVALUATING": 7
+  },
+  "events_total": 35174,
+  "events_by_type": {
+    "forecast": 7121,
+    "evaluation": 27920,
+    "proposal_orchestrated": 72,
+    "promotion_checkpoint": 58,
+    "ai_review": 3
+  },
+  "workspace": "D:\\Research\\Codex\\projects\\investment\\AI-Investment-Assistant\\model_iteration\\etf_516150"
+}

@@ -1,0 +1,168 @@
+{
+  "ITERATION_ID": "ITERATION_002_516150",
+  "etf": "516150",
+  "name": "稀土ETF嘉实",
+  "generated_at": "2026-08-08T22:15:00+09:00",
+  "engine": "rolling promotion-v2.0.0",
+  "coverage": {"start": "2021-12-17", "end": "2026-08-07"},
+  "anchors_usable": 237,
+  "horizon_weeks": 8,
+  "cost_bps": 10,
+  "initial_champion": {
+    "id": "CH_S064_1",
+    "rule": "mom20>0 -> 80% + 8周回撤>10% -> 40%",
+    "spec_hash": "initial",
+    "effective_anchor": 0
+  },
+  "final_champion": {
+    "id": "CH_P036_4",
+    "display_name": "CH_P036_4_516150",
+    "spec_hash": "39ec7b8b91fea239",
+    "effective_anchor": 173
+  },
+  "promotion_history": [
+    {
+      "old_champion_id": "CH_S064_1",
+      "new_champion_id": "CH_P006_5",
+      "anchor": 64,
+      "effective_anchor": 65,
+      "ai_decision": "APPROVE"
+    },
+    {
+      "old_champion_id": "CH_P006_5",
+      "new_champion_id": "CH_P020_2",
+      "anchor": 116,
+      "effective_anchor": 117,
+      "ai_decision": "APPROVE"
+    },
+    {
+      "old_champion_id": "CH_P020_2",
+      "new_champion_id": "CH_P036_4",
+      "anchor": 172,
+      "effective_anchor": 173,
+      "ai_decision": "APPROVE"
+    }
+  ],
+  "challenger_counts": {
+    "total": 320,
+    "STALE_SHADOW": 235,
+    "REJECTED": 3,
+    "SHADOW_EVALUATION": 48,
+    "EVALUATING": 33,
+    "PROMOTED": 1
+  },
+  "event_counts": {
+    "total": 47143,
+    "forecast": 9632,
+    "evaluation": 37363,
+    "proposal_orchestrated": 87,
+    "promotion_checkpoint": 58,
+    "ai_review": 3,
+    "challenger_rebased": 0
+  },
+  "proposals_frozen": 88,
+  "proposals_registered": 87,
+  "ledger_hash": "f584aff80b63edec3c858a824816ebef621884b0fbb4692934900e6f8060c892",
+  "pending_ai_reviews": 0,
+  "benchmark_pk": {
+    "full_cycle_same_cashflow": {
+      "name": "Champion 晋级链（周投2000）",
+      "twr": 0.119212,
+      "cum_money": 0.114387,
+      "irr_annual": 0.048215,
+      "sharpe": 0.240108,
+      "mdd": -0.129215,
+      "invested": 472000.0,
+      "final_nav": 525990.533824,
+      "avg_position": 0.2384,
+      "in_market_weeks": 82,
+      "total_weeks": 237
+    },
+    "initial_champion_fixed": {
+      "name": "CH_S064_1 固定规则（周投2000）",
+      "twr": 0.063063,
+      "cum_money": 0.12459,
+      "irr_annual": 0.052299,
+      "sharpe": 0.166242,
+      "mdd": -0.276083,
+      "invested": 472000.0,
+      "final_nav": 530806.249553
+    },
+    "final_champion_fixed": {
+      "name": "CH_P036_4 固定规则（周投2000）",
+      "twr": 0.123925,
+      "cum_money": 0.114838,
+      "irr_annual": 0.048396,
+      "sharpe": 0.256267,
+      "mdd": -0.206297,
+      "invested": 472000.0,
+      "final_nav": 526203.514747
+    },
+    "reference_smart_dca": {
+      "name": "智能定投",
+      "twr": 0.034439,
+      "cum_money": 0.468005,
+      "irr_annual": 0.158256,
+      "sharpe": 0.190695,
+      "mdd": -0.505906,
+      "invested": 462059.997474,
+      "final_nav": 678306.323671
+    },
+    "reference_fixed_dca": {
+      "name": "固定定投",
+      "twr": 0.034439,
+      "cum_money": 0.371842,
+      "irr_annual": 0.142475,
+      "sharpe": 0.190695,
+      "mdd": -0.505906,
+      "invested": 471528.0,
+      "final_nav": 646861.953943
+    },
+    "buy_hold": {
+      "name": "买入持有",
+      "cum": 0.034389,
+      "sharpe": 0.1907,
+      "mdd": -0.519794
+    },
+    "promotion_windows": [
+      {
+        "candidate": "CH_P006_5",
+        "checkpoint_anchor": 64,
+        "challenger_twr": -0.0344,
+        "dca_twr": -0.148,
+        "challenger_irr": -0.0703,
+        "dca_irr": -0.1487,
+        "challenger_mdd": -0.0586,
+        "dca_mdd": -0.2265
+      },
+      {
+        "candidate": "CH_P020_2",
+        "checkpoint_anchor": 116,
+        "challenger_twr": 0.0337,
+        "dca_twr": -0.1286,
+        "challenger_irr": 0.1612,
+        "dca_irr": 0.02,
+        "challenger_mdd": -0.0687,
+        "dca_mdd": -0.3198
+      },
+      {
+        "candidate": "CH_P036_4",
+        "checkpoint_anchor": 172,
+        "challenger_twr": 0.0519,
+        "dca_twr": -0.0484,
+        "challenger_irr": 0.1287,
+        "dca_irr": 0.0595,
+        "challenger_mdd": -0.0408,
+        "dca_mdd": -0.1534
+      }
+    ],
+    "note": "口径沿用模型同现金流门禁：Champion 规则按每周 2000 元入金并自主决定仓位；智能定投按 ±2.5% 扣款率自动加减投入。TWR/Sharpe/MDD 为时间加权口径，IRR/累计市值收益为资金加权口径。"
+  },
+  "notes": [
+    "全周期重新开始：初始 Champion 由 champion_zero_axis（零轴双正）改为 CH_S064_1（mom20>0 → 80%，8周回撤>10% 减半）。",
+    "237/237 锚点完成回放；88 份 Proposal 冻结，87 轮成功注册挑战者，1 轮无候选通过 screening（不阻断回放）。",
+    "隔离 VERIFY 复现完成，REPLAY/VERIFY 台账哈希一致；60 项单元测试通过。",
+    "2026-08-08 活动模型已恢复为本 CH_S064_1 基线；CH_S050_3 路线归档于 backup/etf_516150_ch_s050_3_20260808_223538。",
+    "最终 Champion 输出名称按 ETF 编号标注：CH_P036_4_516150。"
+  ]
+}

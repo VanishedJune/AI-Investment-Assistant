@@ -1,0 +1,53 @@
+{
+  "etf": "516150",
+  "name": "稀土ETF嘉实",
+  "workspace": "etf_516150",
+  "coverage": {
+    "start": "2021-03-17",
+    "end": "2026-08-28"
+  },
+  "expected_anchors": 240,
+  "horizon": 8,
+  "cost_bps": 10,
+  "champion": {
+    "id": "CH_P036_4",
+    "spec": {
+      "score": {
+        "terms": [
+          {
+            "feature": "dd20",
+            "weight": -20.0
+          },
+          {
+            "feature": "d_dif1",
+            "weight": 1000.0
+          },
+          {
+            "feature": "mom5",
+            "weight": -50.0
+          }
+        ]
+      },
+      "position": {
+        "type": "step",
+        "levels": [
+          {
+            "score_min": 0.0,
+            "weight": 0.5
+          }
+        ],
+        "min": 0.0,
+        "max": 0.5
+      }
+    }
+  },
+  "promotion_policy_version": "promotion-v2.0.0",
+  "promotion_policy": {
+    "benchmark_hard_gate": true,
+    "rebase_min_sharpe": 0.7
+  },
+  "execution_policy": {
+    "mode": "b0207_cycle",
+    "decision_cycle_weeks": 4
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "fund-nav-rolling-v1",
+  "instrument_type": "open_end_fund",
+  "code": "021528",
+  "name": "财通成长优选混合C",
+  "coverage": {
+    "start": "2024-05-28",
+    "end": "2026-09-14"
+  },
+  "completed_week_as_of": "2026-09-11",
+  "horizon_weeks": 8,
+  "cost_bps_research": 10.0,
+  "initial_champion_provenance": {
+    "source_code": "159915",
+    "source_champion_id": "CH_P132_3",
+    "mode": "initial_parameters_only"
+  },
+  "champion": {
+    "id": "prediction_roles:weekly_speed",
+    "spec": {
+      "score": {
+        "terms": [
+          {
+            "feature": "w_dif1",
+            "weight": 2000.0
+          },
+          {
+            "feature": "w_dif2",
+            "weight": 1000.0
+          }
+        ]
+      },
+      "position": {
+        "type": "step",
+        "levels": [
+          {
+            "score_min": 0.0,
+            "weight": 0.75
+          }
+        ],
+        "min": 0.0,
+        "max": 0.75
+      },
+      "gates": [
+        {
+          "feature": "w_dif1",
+          "op": ">",
+          "value": 0.0
+        }
+      ]
+    },
+    "latest_position": 0.0
+  },
+  "promotion_history": [
+    {
+      "from": "SEED_159915_CHAMPION",
+      "to": "prediction_roles:weekly_speed",
+      "reason": "existing_prediction_and_full_period_gates"
+    }
+  ],
+  "status": "FULL_CYCLE_COMPLETED_PROMOTED",
+  "completed_at": "2026-09-15T07:59:45Z",
+  "field_availability": {
+    "unit_nav": true,
+    "cum_nav": true,
+    "ohlc": false,
+    "volume": false
+  },
+  "release_status": "RESEARCH_ONLY_FUND_EXECUTION_FEES_INCOMPLETE"
+}

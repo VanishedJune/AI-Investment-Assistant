@@ -1,0 +1,82 @@
+{
+  "schema_version": "iteration-record-v1.0.0",
+  "etf": "512800",
+  "name": "华宝银行ETF",
+  "generated_at": "2026-08-29T16:36:17+09:00",
+  "rule_version": "B0207-v3.0.0",
+  "execution_policy": {
+    "mode": "b0207_cycle",
+    "decision_cycle_weeks": 4,
+    "signal_smooth_days": 5,
+    "non_decision_graded": {
+      "enabled": true,
+      "feature": "d_dif1",
+      "add_cash_frac": 0.5,
+      "sell_holdings_frac": 0.5
+    },
+    "bearish_guard": {
+      "enabled": true,
+      "sell_frac": 0.7,
+      "per_episode": true,
+      "reset_on_recovery": true,
+      "conditions": [
+        {
+          "feature": "d_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "d_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "mom20",
+          "op": "<",
+          "value": -0.05
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "start": "2017-08-03",
+    "end": "2026-08-28"
+  },
+  "usable_anchors": 425,
+  "latest_anchor_index": 424,
+  "resume_from": 425,
+  "pending_ai_reviews": 0,
+  "initial_champion": "CH_S019_3",
+  "final_champion": "CH_S019_3",
+  "promotion_chain": [
+    "CH_S019_3"
+  ],
+  "promotions": 0,
+  "proposals_frozen": 159,
+  "rounds_registered": 117,
+  "diagnostics": 159,
+  "challengers_total": 209,
+  "challenger_status": {
+    "REJECTED": 161,
+    "SHADOW_EVALUATION": 35,
+    "EVALUATING": 13
+  },
+  "events_total": 87195,
+  "events_by_type": {
+    "forecast": 17537,
+    "evaluation": 69436,
+    "proposal_orchestrated": 117,
+    "promotion_checkpoint": 105
+  },
+  "workspace": "D:\\Research\\Codex\\projects\\investment\\AI-Investment-Assistant\\model_iteration\\etf_512800"
+}

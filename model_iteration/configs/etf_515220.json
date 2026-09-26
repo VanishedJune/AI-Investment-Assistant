@@ -1,0 +1,72 @@
+{
+  "etf": "515220",
+  "name": "煤炭ETF国泰",
+  "workspace": "etf_515220",
+  "coverage": {
+    "start": "2020-03-02",
+    "end": "2026-09-04"
+  },
+  "expected_anchors": null,
+  "horizon": 8,
+  "cost_bps": 10,
+  "champion": {
+    "id": "CH_S064_1",
+    "spec": {
+      "score": {
+        "terms": [
+          {
+            "feature": "mom20",
+            "weight": 1250.0
+          }
+        ]
+      },
+      "gates": [
+        {
+          "feature": "mom20",
+          "op": ">",
+          "value": 0.0
+        }
+      ],
+      "position": {
+        "type": "step",
+        "levels": [
+          {
+            "score_min": 0.0,
+            "weight": 0.8
+          }
+        ],
+        "min": 0.0,
+        "max": 0.8
+      },
+      "drawdown_control": {
+        "window_weeks": 8,
+        "threshold": 0.1,
+        "factor": 0.5
+      }
+    }
+  },
+  "promotion_policy_version": "promotion-v2.0.0",
+  "promotion_policy": {
+    "benchmark_hard_gate": true,
+    "rebase_min_sharpe": 0.7
+  },
+  "execution_policy": null,
+  "model_status": "independently_replayed_current_champion",
+  "full_cycle_iteration": {
+    "status": "completed",
+    "completed_on": "2026-09-07",
+    "rule_version": "existing-weekly-model-target",
+    "iteration_record": "model_iteration/etf_515220/iterations/ITERATION_002_515220.json",
+    "coverage": {
+      "start": "2020-03-02",
+      "end": "2026-09-04"
+    },
+    "usable_anchors": 295,
+    "latest_anchor_index": 294,
+    "proposals_frozen": 109,
+    "promotions": 0,
+    "final_champion_id": "CH_S064_1",
+    "corporate_actions_verified": true,
+    "result": "FULL_CYCLE_COMPLETED_NO_PROMOTION"
+  }
+}

@@ -1,0 +1,58 @@
+# Local account, confirmed holdings, and published personal reports
+portfolio_state.json
+app/decision_history/
+app/portfolio_history/
+app/policy_snapshots/
+app/reports/
+app/features/
+!app/features/
+!app/features/latest.json
+
+# Credentials and machine-local settings
+.env
+.env.*
+*.local.json
+*.lnk
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated research history, caches, and large replay output
+archive/
+backup/
+logs/
+drafts/
+champion_vs_dca/
+model_iteration/frozen_champion_states/
+model_iteration/worker_tasks/
+model_iteration/**/events.jsonl
+model_iteration/**/diagnostics/
+model_iteration/**/proposals/
+model_iteration/**/state_history/
+model_iteration/**/sanitized_workspace/
+model_iteration/**/logs/
+model_iteration/**/backups/
+model_iteration/**/archive/
+model_iteration/**/*_verify/
+*.log
+*.tmp
+*.bak
+
+# Private, dated action scripts are not part of the distributable source
+model_iteration/scripts/apply_amplitude_targets_20260807.py
+model_iteration/scripts/apply_portfolio_confirmation_20260824.py
+model_iteration/scripts/author_monthly_candidate_20260919.py
+model_iteration/scripts/generate_monthly_html_20260816.py
+model_iteration/scripts/generate_monthly_html_20260824.py
+model_iteration/scripts/inspect_reference_xlsx.py
+model_iteration/scripts/monitoring_baseline_20260814.py
+model_iteration/scripts/publish_confirmed_hold_20260926.py
+model_iteration/scripts/publish_confirmed_monitoring.py
+model_iteration/scripts/reproduce_0811.py
+model_iteration/scripts/restore_champions_0811.py
+model_iteration/scripts/round_targets_to5_20260807.py
+model_iteration/scripts/update_report_20260807.py
+
+# User-specific test fixtures and dated transaction assertions
+tests/

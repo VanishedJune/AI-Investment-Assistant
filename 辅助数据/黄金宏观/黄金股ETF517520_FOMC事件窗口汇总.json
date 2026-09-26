@@ -1,0 +1,198 @@
+{
+  "schema_version": "gold-fomc-window-v1",
+  "instrument": "517520",
+  "price_field": "adj_close",
+  "event_count": 22,
+  "method": {
+    "window": "FOMC声明日前后15个自然日",
+    "base": "FOMC声明前最后一个A股有效收盘",
+    "availability": "美国声明后的首个A股交易日",
+    "holiday": "目标日非交易日时使用距离目标日最近的有效A股交易日"
+  },
+  "groups": {
+    "2023_hikes": {
+      "events": 0,
+      "average_post15_return_pct": null,
+      "positive_events": 0,
+      "negative_events": 0
+    },
+    "2024_cuts": {
+      "events": 3,
+      "average_post15_return_pct": 4.5607,
+      "positive_events": 1,
+      "negative_events": 2
+    },
+    "2025_cuts": {
+      "events": 3,
+      "average_post15_return_pct": 5.1111,
+      "positive_events": 3,
+      "negative_events": 0
+    },
+    "all_cuts": {
+      "events": 6,
+      "average_post15_return_pct": 4.8359,
+      "positive_events": 4,
+      "negative_events": 2
+    },
+    "all_holds": {
+      "events": 16,
+      "average_post15_return_pct": -0.1067,
+      "positive_events": 9,
+      "negative_events": 7
+    },
+    "2023_hike": {
+      "events": 0,
+      "average_post15_return_pct": null,
+      "positive_events": 0,
+      "negative_events": 0
+    },
+    "2023_cut": {
+      "events": 0,
+      "average_post15_return_pct": null,
+      "positive_events": 0,
+      "negative_events": 0
+    },
+    "2023_hold": {
+      "events": 1,
+      "average_post15_return_pct": 3.8947,
+      "positive_events": 1,
+      "negative_events": 0
+    },
+    "2024_hike": {
+      "events": 0,
+      "average_post15_return_pct": null,
+      "positive_events": 0,
+      "negative_events": 0
+    },
+    "2024_cut": {
+      "events": 3,
+      "average_post15_return_pct": 4.5607,
+      "positive_events": 1,
+      "negative_events": 2
+    },
+    "2024_hold": {
+      "events": 5,
+      "average_post15_return_pct": 2.5783,
+      "positive_events": 3,
+      "negative_events": 2
+    },
+    "2025_hike": {
+      "events": 0,
+      "average_post15_return_pct": null,
+      "positive_events": 0,
+      "negative_events": 0
+    },
+    "2025_cut": {
+      "events": 3,
+      "average_post15_return_pct": 5.1111,
+      "positive_events": 3,
+      "negative_events": 0
+    },
+    "2025_hold": {
+      "events": 5,
+      "average_post15_return_pct": 1.8746,
+      "positive_events": 4,
+      "negative_events": 1
+    },
+    "2026_hike": {
+      "events": 0,
+      "average_post15_return_pct": null,
+      "positive_events": 0,
+      "negative_events": 0
+    },
+    "2026_cut": {
+      "events": 0,
+      "average_post15_return_pct": null,
+      "positive_events": 0,
+      "negative_events": 0
+    },
+    "2026_hold": {
+      "events": 5,
+      "average_post15_return_pct": -5.5732,
+      "positive_events": 1,
+      "negative_events": 4
+    }
+  },
+  "unavailable_events": [
+    {
+      "meeting_date": "2023-02-01",
+      "action": "hike",
+      "change_bp": 25,
+      "target_lower_pct": "4.50",
+      "target_upper_pct": "4.75",
+      "source": "Board of Governors of the Federal Reserve System",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230201a.htm",
+      "status": "unavailable_incomplete_price_window"
+    },
+    {
+      "meeting_date": "2023-03-22",
+      "action": "hike",
+      "change_bp": 25,
+      "target_lower_pct": "4.75",
+      "target_upper_pct": "5.00",
+      "source": "Board of Governors of the Federal Reserve System",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230322a.htm",
+      "status": "unavailable_incomplete_price_window"
+    },
+    {
+      "meeting_date": "2023-05-03",
+      "action": "hike",
+      "change_bp": 25,
+      "target_lower_pct": "5.00",
+      "target_upper_pct": "5.25",
+      "source": "Board of Governors of the Federal Reserve System",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230503a.htm",
+      "status": "unavailable_incomplete_price_window"
+    },
+    {
+      "meeting_date": "2023-06-14",
+      "action": "hold",
+      "change_bp": 0,
+      "target_lower_pct": "5.00",
+      "target_upper_pct": "5.25",
+      "source": "Board of Governors of the Federal Reserve System",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a.htm",
+      "status": "unavailable_incomplete_price_window"
+    },
+    {
+      "meeting_date": "2023-07-26",
+      "action": "hike",
+      "change_bp": 25,
+      "target_lower_pct": "5.25",
+      "target_upper_pct": "5.50",
+      "source": "Board of Governors of the Federal Reserve System",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230726a.htm",
+      "status": "unavailable_incomplete_price_window"
+    },
+    {
+      "meeting_date": "2023-09-20",
+      "action": "hold",
+      "change_bp": 0,
+      "target_lower_pct": "5.25",
+      "target_upper_pct": "5.50",
+      "source": "Board of Governors of the Federal Reserve System",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230920a.htm",
+      "status": "unavailable_incomplete_price_window"
+    },
+    {
+      "meeting_date": "2023-11-01",
+      "action": "hold",
+      "change_bp": 0,
+      "target_lower_pct": "5.25",
+      "target_upper_pct": "5.50",
+      "source": "Board of Governors of the Federal Reserve System",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20231101a.htm",
+      "status": "unavailable_incomplete_price_window"
+    }
+  ],
+  "price_coverage": {
+    "start": "2023-11-01",
+    "end": "2026-09-11"
+  },
+  "policy_coverage": {
+    "last_decision": "2026-07-29",
+    "decisions": 29,
+    "source_mode": "official_verified",
+    "checked_through": "2026-09-11"
+  }
+}

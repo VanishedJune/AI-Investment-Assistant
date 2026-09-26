@@ -1,0 +1,48 @@
+{
+  "schema_version": "gold-context-evidence-v1",
+  "instrument_scope": ["518600"],
+  "as_of": "2026-08-28",
+  "evidence": [
+    {
+      "id": "fomc_policy_and_calendar",
+      "status": "verified_history_and_calendar",
+      "source_date": "2026-08-28",
+      "meeting_date": "2026-09-15/2026-09-16",
+      "observed_fact": "本地已登记2023至2025年全部24次FOMC政策决议及官方声明来源，并基于518600复权收盘价生成前后15个自然日事件窗口；美联储官方日历列示下一次FOMC会议为2026年9月15日至16日。本登记未加入未经核实的加息或降息概率。",
+      "local_files": [
+        "美联储政策决议.csv",
+        "黄金ETF_FOMC事件窗口.csv",
+        "黄金ETF_FOMC事件窗口汇总.json"
+      ],
+      "gold_horizon": "short_to_medium",
+      "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+      "id": "central_bank_gold_demand",
+      "status": "verified_survey_only",
+      "report_period": "2026 survey",
+      "actual_or_survey": "survey",
+      "observed_fact": "世界黄金协会2026年调查显示，89%的受访央行预计未来12个月全球央行黄金储备增加，45%预计自身黄金储备增加。该结果是意愿调查，不是实际购金吨数。",
+      "gold_horizon": "medium_to_long",
+      "source_url": "https://www.gold.org/goldhub/research/central-bank-gold-reserves-survey-2026"
+    },
+    {
+      "id": "central_bank_actual_purchases",
+      "status": "unavailable",
+      "observed_fact": "截至本次登记，未录入经过可靠来源核验的2026年最新实际购金吨数。",
+      "use_in_analysis": false
+    },
+    {
+      "id": "dollar_and_usdcny",
+      "status": "unavailable",
+      "observed_fact": "尚未取得与2026-08-28一致且来源可靠的美元与USD/CNY收盘数据。",
+      "use_in_analysis": false
+    },
+    {
+      "id": "international_gold_and_session_gap",
+      "status": "unavailable",
+      "observed_fact": "尚未取得与2026-08-28一致且来源可靠的国际黄金收盘数据。",
+      "use_in_analysis": false
+    }
+  ]
+}

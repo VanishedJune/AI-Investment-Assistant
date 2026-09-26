@@ -1,0 +1,15 @@
+{
+  "schema_version": "ca-events-v1.0.0",
+  "etf": "517520",
+  "coverage": {
+    "start": "2023-11-01",
+    "end": "2026-09-04",
+    "verified": true,
+    "source": [
+      "https://fundf10.eastmoney.com/fhsp_517520.html（2026年度及历史分红送配、拆分详情均显示暂无记录）",
+      "https://query.sse.com.cn/security/stock/queryCompanyBulletin.do（上交所517520公告查询，2023-11-01至2026-09-04未检出分红或份额拆分公告）"
+    ],
+    "note": "天天基金分红送配记录与上交所公告列表交叉核对：覆盖期内未发现现金分红或份额拆分。未复制518600公司行动。"
+  },
+  "events": []
+}

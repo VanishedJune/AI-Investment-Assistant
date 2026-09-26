@@ -1,0 +1,86 @@
+{
+  "schema_version": "iteration-record-v1.0.0",
+  "etf": "512690",
+  "name": "鹏华酒ETF",
+  "generated_at": "2026-08-29T16:29:51+09:00",
+  "rule_version": "B0207-v3.0.0",
+  "execution_policy": {
+    "mode": "b0207_cycle",
+    "decision_cycle_weeks": 4,
+    "signal_smooth_days": 5,
+    "non_decision_graded": {
+      "enabled": true,
+      "feature": "d_dif1",
+      "add_cash_frac": 0.5,
+      "sell_holdings_frac": 0.5
+    },
+    "bearish_guard": {
+      "enabled": true,
+      "sell_frac": 0.7,
+      "per_episode": true,
+      "reset_on_recovery": true,
+      "conditions": [
+        {
+          "feature": "d_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "d_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "mom20",
+          "op": "<",
+          "value": -0.05
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "start": "2019-05-06",
+    "end": "2026-08-28"
+  },
+  "usable_anchors": 336,
+  "latest_anchor_index": 335,
+  "resume_from": 336,
+  "pending_ai_reviews": 0,
+  "initial_champion": "CH_S033_2",
+  "final_champion": "CH_S003_3",
+  "promotion_chain": [
+    "CH_S033_2",
+    "CH_S003_3"
+  ],
+  "promotions": 1,
+  "proposals_frozen": 124,
+  "rounds_registered": 88,
+  "diagnostics": 124,
+  "challengers_total": 175,
+  "challenger_status": {
+    "STALE_SHADOW": 59,
+    "PROMOTED": 1,
+    "REJECTED": 68,
+    "SHADOW_EVALUATION": 39,
+    "EVALUATING": 8
+  },
+  "events_total": 65416,
+  "events_by_type": {
+    "forecast": 13193,
+    "evaluation": 52052,
+    "proposal_orchestrated": 88,
+    "promotion_checkpoint": 82,
+    "ai_review": 1
+  },
+  "workspace": "D:\\Research\\Codex\\projects\\investment\\AI-Investment-Assistant\\model_iteration\\etf_512690"
+}

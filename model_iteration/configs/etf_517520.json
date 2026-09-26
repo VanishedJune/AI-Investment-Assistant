@@ -1,0 +1,81 @@
+{
+  "etf": "517520",
+  "name": "黄金股ETF永赢",
+  "workspace": "etf_517520",
+  "coverage": {
+    "start": "2023-11-01",
+    "end": "2026-09-04"
+  },
+  "expected_anchors": null,
+  "horizon": 8,
+  "cost_bps": 10,
+  "champion": {
+    "id": "CH_S064_1",
+    "spec": {
+      "score": {
+        "terms": [
+          {
+            "feature": "mom20",
+            "weight": 1250.0
+          }
+        ]
+      },
+      "gates": [
+        {
+          "feature": "mom20",
+          "op": ">",
+          "value": 0.0
+        }
+      ],
+      "position": {
+        "type": "step",
+        "levels": [
+          {
+            "score_min": 0.0,
+            "weight": 0.8
+          }
+        ],
+        "min": 0.0,
+        "max": 0.8
+      },
+      "drawdown_control": {
+        "window_weeks": 8,
+        "threshold": 0.1,
+        "factor": 0.5
+      }
+    }
+  },
+  "promotion_policy_version": "promotion-v2.0.0",
+  "promotion_policy": {
+    "benchmark_hard_gate": true,
+    "rebase_min_sharpe": 0.7
+  },
+  "execution_policy": null,
+  "training_disabled": false,
+  "model_status": "independently_replayed_current_champion",
+  "initial_champion_provenance": {
+    "source_code": "518600",
+    "source_workspace": "etf_518600",
+    "source_champion_id": "CH_S064_1",
+    "source_trained_anchor_index": 271,
+    "transfer_confirmed_on": "2026-09-07",
+    "mode": "initial_parameters_only"
+  },
+  "full_cycle_iteration": {
+    "status": "completed",
+    "completed_on": "2026-09-07",
+    "rule_version": "existing-weekly-model-target",
+    "iteration_record": "model_iteration/etf_517520/iterations/ITERATION_001_517520.json",
+    "coverage": {
+      "start": "2023-11-01",
+      "end": "2026-09-04"
+    },
+    "usable_anchors": 108,
+    "latest_anchor_index": 107,
+    "proposals_frozen": 39,
+    "promotions": 0,
+    "final_champion_id": "CH_S064_1",
+    "corporate_actions_verified": true,
+    "result": "FULL_CYCLE_COMPLETED_NO_PROMOTION"
+  }
+}

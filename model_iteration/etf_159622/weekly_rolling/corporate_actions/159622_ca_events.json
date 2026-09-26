@@ -1,0 +1,17 @@
+{
+  "schema_version": "ca-events-v1.0.0",
+  "etf": "159622",
+  "coverage": {
+    "start": "2023-05-09",
+    "end": "2026-08-28",
+    "verified": true,
+    "source": [
+      "https://fund.stockstar.com/funds/159622.shtml（成立以来分红：每份累计0.00元，0次）",
+      "https://www.dayfund.cn/fundfh/159622.html（创新药ETF沪港深暂未进行分红送配）",
+      "http://basic.10jqka.com.cn/159622/index.html（创新药ETF沪港深成立以来共分红 0 次）",
+      "https://fundf10.eastmoney.com/159622.html（基金档案：分红送配无记录；检索未见份额拆分/折算公告）"
+    ],
+    "note": "显式可核实来源确认：2023-05-09~2026-08-28 窗口内无现金分红、无份额拆分/合并事件（2026-08-08~2026-08-28 内无新增公司行动，与既有分红/拆分历史一致）。"
+  },
+  "events": []
+}

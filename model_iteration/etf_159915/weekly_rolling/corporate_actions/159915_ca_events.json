@@ -1,0 +1,16 @@
+{
+  "schema_version": "ca-events-v1.0.0",
+  "etf": "159915",
+  "coverage": {
+    "start": "2011-12-09",
+    "end": "2026-08-28",
+    "verified": true,
+    "source": [
+      "https://fund.stockstar.com/funds/159915.shtml（成立以来分红 每份累计0.00元，0次，2026-08-07）",
+      "https://www.lixinger.com/equity/fund/detail/sz/159915/159915/dividend-split（历史分红派息及拆分列表：仅2011-11-30建仓期份额折算，早于数据窗口）",
+      "https://fund.10jqka.com.cn/159915/historynet.html#dividends（拆分折算日 2011-11-30，公告 2011-11-25；窗口内无后续拆分）"
+    ],
+    "note": "显式可核验来源确认：2011-12-09~2026-08-28 窗口内无现金分红、无份额拆分/合并事件（2026-08-08~2026-08-28 内无新增公司行动，与既有分红/拆分历史一致）。"
+  },
+  "events": []
+}

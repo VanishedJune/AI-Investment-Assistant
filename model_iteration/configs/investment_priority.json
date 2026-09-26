@@ -1,0 +1,80 @@
+{
+  "schema_version": "investment-priority-v4",
+  "policy_id": "B0207",
+  "allocation_engine": "investment_priority_v3",
+  "runtime_role": "mechanical_baseline_only",
+  "priority": [
+    "159915",
+    "517520",
+    "516150",
+    "159622",
+    "159611",
+    "515220",
+    "512800",
+    "512690"
+  ],
+  "priority_slots": {
+    "159915": {
+      "slot_id": "GROWTH_PRIORITY_1",
+      "display_name": "创业板ETF / 财通成长优选混合C",
+      "members": [
+        "159915",
+        "021528"
+      ],
+      "selection_order": [
+        "159915",
+        "021528"
+      ],
+      "selection_rule": "159915看多时由159915承接；159915看空且021528自身模型看多时由021528承接；两者合计只占第一优先级一个槽位"
+    }
+  },
+  "core_size": 3,
+  "secondary_core_size": 2,
+  "core_budget_pct": 85,
+  "remainder_budget_pct": 15,
+  "floor_step_pct": 5,
+  "max_single_pct": 100,
+  "decision_cycle_days": 28,
+  "weekly_deploy": true,
+  "use_champion_position_scale": true,
+  "single_bullish_full_budget": true,
+  "core_ladder_pct": {
+    "positions": {
+      "1": [
+        85
+      ],
+      "2": [
+        85
+      ],
+      "3": [
+        85
+      ],
+      "1,2": [
+        50,
+        35
+      ],
+      "1,3": [
+        65,
+        20
+      ],
+      "2,3": [
+        50,
+        35
+      ],
+      "1,2,3": [
+        55,
+        20,
+        10
+      ]
+    }
+  },
+  "remainder_ladder_pct": {
+    "1": [
+      15
+    ],
+    "2": [
+      10,
+      5
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": "iteration-record-v1.0.0",
+  "etf": "159611",
+  "name": "电力ETF广发",
+  "generated_at": "2026-09-19T12:13:19+09:00",
+  "rule_version": "B0207-v3.0.0",
+  "execution_policy": {
+    "mode": "b0207_cycle",
+    "decision_cycle_weeks": 4,
+    "signal_smooth_days": null,
+    "non_decision_graded": {
+      "enabled": false,
+      "feature": "d_dif1",
+      "add_cash_frac": 0.5,
+      "sell_holdings_frac": 0.5
+    },
+    "bearish_guard": {
+      "enabled": true,
+      "sell_frac": 0.7,
+      "per_episode": true,
+      "reset_on_recovery": true,
+      "conditions": [
+        {
+          "feature": "d_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "d_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "mom20",
+          "op": "<",
+          "value": -0.05
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "start": "2022-01-07",
+    "end": "2026-09-18"
+  },
+  "usable_anchors": 201,
+  "latest_anchor_index": 200,
+  "resume_from": 201,
+  "pending_ai_reviews": 0,
+  "initial_champion": "CH_S064_1",
+  "final_champion": "CH_S064_1",
+  "promotion_chain": [
+    "CH_S064_1"
+  ],
+  "promotions": 0,
+  "proposals_frozen": 75,
+  "rounds_registered": 52,
+  "diagnostics": 75,
+  "challengers_total": 80,
+  "challenger_status": {
+    "REJECTED": 48,
+    "SHADOW_EVALUATION": 24,
+    "EVALUATING": 8
+  },
+  "events_total": 30585,
+  "events_by_type": {
+    "forecast": 6189,
+    "evaluation": 24295,
+    "proposal_orchestrated": 52,
+    "promotion_checkpoint": 49
+  },
+  "workspace": "D:\\Research\\Codex\\projects\\investment\\AI-Investment-Assistant\\model_iteration\\etf_159611"
+}

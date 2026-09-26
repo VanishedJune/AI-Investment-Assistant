@@ -1,0 +1,9 @@
+﻿code,metadata_date,nav,iopv,premium_discount_pct,turnover_pct,median_amount_20d,aum_cny,tracking_error_60d_pct,tracking_error_252d_pct,benchmark_code,metadata_status,missing_fields,source,source_url,run_id
+159915,2026-09-24,,,,,,,,,399006,degraded,nav|iopv|premium_discount_pct|turnover_pct,unavailable,https://www.efunds.com.cn/,20260926T093659
+517520,2026-09-24,,,,,,,,,,degraded,nav|iopv|premium_discount_pct|turnover_pct,unavailable,https://www.maxwealthfund.com/,20260926T093659
+516150,2026-09-24,,,,,,,,,930598,degraded,nav|iopv|premium_discount_pct|turnover_pct,unavailable,https://www.jsfund.cn/,20260926T093659
+159622,2026-09-24,,,,,,,,,931409,degraded,nav|iopv|premium_discount_pct|turnover_pct,unavailable,https://www.dfcfund.com/,20260926T093659
+159611,2026-09-24,,,,,,,,,,degraded,nav|iopv|premium_discount_pct|turnover_pct,unavailable,https://www.gffunds.com.cn/funds/?fundcode=159611,20260926T093659
+515220,2026-09-24,,,,,,,,,399998,degraded,nav|iopv|premium_discount_pct|turnover_pct,unavailable,https://www.gtfund.com/,20260926T093659
+512800,2026-09-24,,,,,,,,,399986,degraded,nav|iopv|premium_discount_pct|turnover_pct,unavailable,https://www.fsfund.com/,20260926T093659
+512690,2026-09-24,,,,,,,,,399987,degraded,nav|iopv|premium_discount_pct|turnover_pct,unavailable,https://www.phfund.com.cn/,20260926T093659

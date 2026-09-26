@@ -1,0 +1,92 @@
+{
+  "ITERATION_ID": "ITERATION_002_512690",
+  "etf": "512690",
+  "name": "鹏华酒ETF",
+  "generated_at": "2026-08-08T22:16:00+09:00",
+  "engine": "rolling promotion-v2.0.0",
+  "coverage": {
+    "start": "2019-05-06",
+    "end": "2026-08-07",
+    "usable_start": "2020-02-14"
+  },
+  "anchors_usable": 333,
+  "horizon_weeks": 8,
+  "cost_bps": 10,
+  "initial_champion": {
+    "id": "CH_S064_1",
+    "rule": "mom20>0 -> 80%; 8周回撤>10% -> 40%",
+    "spec_hash": "a89ae70c5d0f4973",
+    "effective_anchor": 0
+  },
+  "final_champion": {
+    "id": "CH_S032_2",
+    "rule": "w_dif1>0 -> 50%起步，连续2周确认 -> 100%",
+    "spec_hash": "b2a5578b17417837",
+    "effective_anchor": 325
+  },
+  "promotion_history": [
+    {
+      "old_champion_id": "CH_S064_1",
+      "new_champion_id": "CH_S006_1",
+      "anchor": 76,
+      "effective_anchor": 77,
+      "ai_decision": "APPROVE"
+    },
+    {
+      "old_champion_id": "CH_S006_1",
+      "new_champion_id": "CH_S016_2",
+      "anchor": 168,
+      "effective_anchor": 169,
+      "ai_decision": "APPROVE"
+    },
+    {
+      "old_champion_id": "CH_S016_2",
+      "new_champion_id": "CH_S022_2",
+      "anchor": 208,
+      "effective_anchor": 209,
+      "ai_decision": "APPROVE"
+    },
+    {
+      "old_champion_id": "CH_S022_2",
+      "new_champion_id": "CH_P055_1",
+      "anchor": 248,
+      "effective_anchor": 249,
+      "ai_decision": "APPROVE"
+    },
+    {
+      "old_champion_id": "CH_P055_1",
+      "new_champion_id": "CH_S032_2",
+      "anchor": 324,
+      "effective_anchor": 325,
+      "ai_decision": "APPROVE"
+    }
+  ],
+  "challenger_counts": {
+    "total": 419,
+    "STALE_SHADOW": 401,
+    "REJECTED": 0,
+    "SHADOW_EVALUATION": 0,
+    "EVALUATING": 17,
+    "PROMOTED": 1,
+    "NON_WINNING_CANDIDATE": 0
+  },
+  "event_counts": {
+    "total": 77009,
+    "forecast": 15396,
+    "evaluation": 61406,
+    "proposal_orchestrated": 120,
+    "promotion_checkpoint": 82,
+    "ai_review": 5,
+    "challenger_rebased": 0
+  },
+  "proposals_frozen": 124,
+  "proposals_registered": 120,
+  "ledger_hash": "83321265c8f6df1a5fc167200a087a51e5b85e49031425582937374c84f23cf1",
+  "pending_ai_reviews": 0,
+  "notes": [
+    "全周期重新开始：初始 Champion 由 champion_zero_axis（零轴双正）改为 CH_S064_1（mom20>0 → 80%，8周回撤>10% 减半）。",
+    "旧零轴双正工作区产物已归档至 backup/etf_512690_legacy_zero_axis_20260808_215150。",
+    "120 个 Due 轮次成功注册挑战者，4 轮无候选通过 screening（不阻断回放）。",
+    "全周期共 5 次 AI 复核晋级，无 rebase。"
+  ]
+}

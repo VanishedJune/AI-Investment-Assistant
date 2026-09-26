@@ -1,0 +1,25 @@
+{
+  "code": "021528",
+  "name": "财通成长优选混合C",
+  "instrument_type": "open_end_fund",
+  "workspace": "fund_021528",
+  "data_path": "基金数据/021528_财通成长优选混合C_净值历史.csv",
+  "horizon": 8,
+  "cost_bps": 10,
+  "initial_champion": {
+    "source_code": "159915",
+    "mode": "initial_parameters_only"
+  },
+  "feature_policy": {
+    "price_field": "unit_nav",
+    "daily_and_completed_weekly": true,
+    "ohlc_available": false,
+    "volume_available": false,
+    "intraday_execution_available": false
+  },
+  "execution_policy": {
+    "mode": "fund_nav_confirmation",
+    "research_only": true,
+    "real_fee_schedule_required_before_release": true
+  }
+}

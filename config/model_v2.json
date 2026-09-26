@@ -1,0 +1,38 @@
+{
+  "schema_version": "2.0.0",
+  "model_version": "2.0.0",
+  "weights": {
+    "trend_quality": 0.30,
+    "expected_return": 0.20,
+    "similarity_confidence": 0.15,
+    "risk_adjusted_return": 0.15,
+    "volume_confirmation": 0.10,
+    "liquidity_tracking": 0.10
+  },
+  "gates": {
+    "minimum_independent_samples_8w": 10,
+    "negative_expectation_win_rate_pct": 45,
+    "minimum_reward_risk": 1.5,
+    "candidate_score": 60,
+    "watch_score": 45,
+    "high_volatility_percentile": 80
+  },
+  "risk": {
+    "per_position_budget": 0.01,
+    "single_asset_cap": 1.00,
+    "high_volatility_cap": 1.00,
+    "degraded_metadata_cap": 1.00,
+    "sector_cap": 1.00,
+    "correlation_cluster_cap": 1.00,
+    "portfolio_cap": 1.00,
+    "minimum_portfolio_exposure": 0.00,
+    "holding_count_limit_enabled": false,
+    "correlation_exclusion_enabled": false,
+    "correlation_threshold": 0.80,
+    "correlation_lookback": 252,
+    "minimum_overlap": 120
+  },
+  "similarity": {"cooldown_4w": 20, "cooldown_8w": 40, "minimum_samples": 10},
+  "backtest": {"minimum_weekly_points": 52, "round_trip_cost_bps": 10},
+  "data": {"formal_close_time": "15:30", "timezone": "Asia/Shanghai"}
+}

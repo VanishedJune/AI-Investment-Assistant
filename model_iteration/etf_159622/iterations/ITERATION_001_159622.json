@@ -1,0 +1,85 @@
+{
+  "schema_version": "iteration-record-v1.0.0",
+  "etf": "159622",
+  "name": "创新药ETF东财",
+  "generated_at": "2026-08-29T15:56:59+09:00",
+  "rule_version": "B0207-v3.0.0",
+  "execution_policy": {
+    "mode": "b0207_cycle",
+    "decision_cycle_weeks": 4,
+    "signal_smooth_days": 5,
+    "non_decision_graded": {
+      "enabled": true,
+      "feature": "d_dif1",
+      "add_cash_frac": 0.5,
+      "sell_holdings_frac": 0.5
+    },
+    "bearish_guard": {
+      "enabled": true,
+      "sell_frac": 0.7,
+      "per_episode": true,
+      "reset_on_recovery": true,
+      "conditions": [
+        {
+          "feature": "d_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "d_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif1",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "w_dif2",
+          "op": "<",
+          "value": 0.0
+        },
+        {
+          "feature": "mom20",
+          "op": "<",
+          "value": -0.05
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "start": "2023-05-12",
+    "end": "2026-08-28"
+  },
+  "usable_anchors": 131,
+  "latest_anchor_index": 130,
+  "resume_from": 131,
+  "pending_ai_reviews": 0,
+  "initial_champion": "CH_S064_1",
+  "final_champion": "CH_S010_3",
+  "promotion_chain": [
+    "CH_S064_1",
+    "CH_P008_2",
+    "CH_S010_3"
+  ],
+  "promotions": 2,
+  "proposals_frozen": 48,
+  "rounds_registered": 45,
+  "diagnostics": 48,
+  "challengers_total": 119,
+  "challenger_status": {
+    "STALE_SHADOW": 87,
+    "PROMOTED": 1,
+    "EVALUATING": 31
+  },
+  "events_total": 14165,
+  "events_by_type": {
+    "forecast": 2905,
+    "evaluation": 11182,
+    "proposal_orchestrated": 45,
+    "promotion_checkpoint": 31,
+    "ai_review": 2
+  },
+  "workspace": "D:\\Research\\Codex\\projects\\investment\\AI-Investment-Assistant\\model_iteration\\etf_159622"
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "ca-events-v1.0.0",
+  "etf": "512800",
+  "coverage": {
+    "start": "2017-08-03",
+    "end": "2026-08-28",
+    "verified": true,
+    "source": [
+      "https://fundf10.eastmoney.com/fhsp_512800.html（分红送配：2025-07-04 份额分拆 1:2.0000；无现金分红记录）",
+      "https://www.95579.com/main/a/20250701/35665.shtml（长江证券转华宝基金公告：份额拆分权益登记日 2025-07-04，除权日 2025-07-07，比例 1:2）",
+      "https://www.9fzt.com/detail/fund_512800_2/10557380.html（拆分结果公告：拆分后基金份额净值 0.8889 元）",
+      "https://fund.stockstar.com/funds/512800.shtml（成立以来分红 每份累计0.00元，0次）"
+    ],
+    "note": "显式可核验来源确认：2017-08-03~2026-08-28 窗口内无现金分红；仅一次份额拆分（2025-07-07 除权，1:2）（2026-08-08~2026-08-28 内无新增公司行动）。"
+  },
+  "events": [
+    {
+      "type": "split",
+      "ex_date": "2025-07-07",
+      "entitlement_date": "2025-07-04",
+      "pay_date": null,
+      "ratio": 2.0,
+      "dps": null,
+      "source": [
+        "https://fundf10.eastmoney.com/fhsp_512800.html",
+        "https://www.95579.com/main/a/20250701/35665.shtml"
+      ],
+      "verified": true
+    }
+  ]
+}
