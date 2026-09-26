@@ -1,15 +1,15 @@
 # AI Investment Assistant
 
-ETF 与基金研究、冻结冠军信号监控及月报生成的 Python 项目。
+ETF 与基金研究工具，提供行情更新、技术指标计算、冻结模型信号监控和周期报告相关代码。项目不连接券商，也不自动交易。
 
-## 发布范围
+## 主要功能
 
-- 当前研究脚本、模型配置、8 个 ETF 槽位及 021528 基金所需的冻结模型状态；
-- 可公开的 ETF 行情、基金净值、宏观辅助数据和客观指标快照；
-- 与个人账户无关的应用源码、更新脚本和模型回归测试。
-- 冻结冠军读取所必需的公司行动登记和轻量迭代记录。
+- 8 个 ETF 排序槽位与 `021528` 基金的独立数据分析；
+- ETF 行情、基金净值和黄金宏观辅助数据整理；
+- 日线、周线技术指标与冻结冠军信号监控；
+- B0207 周期基线、V70 风险保护及报告相关研究代码。
 
-
+冻结模型状态位于 `model_iteration/etf_<代码>/weekly_rolling/state.json`。行情更新和日常监控不会自动训练或晋升模型。
 
 ## 本地准备
 
@@ -21,14 +21,12 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 ```
 
-行情和基金净值文件随源码提供，截止日期以 `data_manifest.json` 与具体文件为准。冻结冠军监控入口：
+数据截止日期以 `data_manifest.json` 与具体文件为准。查看冻结冠军监控入口：
 
 ```powershell
 python -B model_iteration/scripts/monitoring_baseline_report.py --help
 ```
 
-正式月报、真实持仓核对及成交登记需要私人的 `portfolio_state.json` 和相应历史记录；缺失时应明确失败，而不是把演示数据当成真实账户。完整本地治理规则和历史审查材料仍保留在私人工作区，公开版摘要见 [PUBLIC_STRATEGY.md](PUBLIC_STRATEGY.md)。
-
 ## 注意
 
-研究结果不构成投资建议。使用前请自行核实行情截止日、数据来源、模型适用性与账户状态。
+研究结果不构成投资建议。使用前请核实行情截止日、数据来源及模型适用性。

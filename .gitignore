@@ -1,4 +1,4 @@
-# Local account, confirmed holdings, and published personal reports
+# Runtime state and generated reports
 portfolio_state.json
 app/decision_history/
 app/portfolio_history/
